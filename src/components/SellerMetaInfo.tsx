@@ -31,6 +31,13 @@ const SellerMetaInfo = () => {
         </div>
       </div>
       <ImageUpload />
+      <Image
+        className="w-10/12 mt-20"
+        src={`/images/line_8.svg`}
+        alt={"line_8"}
+        width={760}
+        height={31}
+      />
     </div>
   );
 };
