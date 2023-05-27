@@ -4,8 +4,8 @@ export default {
   type: 'document',
   fields: [
     {
-      title: 'Author',
-      name: 'author',
+      title: '정비사',
+      name: 'mechanic',
       type: 'string',
     },
     {
@@ -72,31 +72,88 @@ export default {
       title: '외부 상태 x/5',
       name: 'evaluationExterior',
       type: 'number',
+      options: {
+        layout: 'radio',
+        list: [
+          {title: '1', value: 1},
+          {title: '2', value: 2},
+          {title: '3', value: 3},
+          {title: '4', value: 4},
+          {title: '5', value: 5},
+        ],
+      },
     },
     {
       title: '소모품 x/5',
       name: 'evaluationExpendables',
       type: 'number',
+      options: {
+        layout: 'radio',
+        list: [
+          {title: '1', value: 1},
+          {title: '2', value: 2},
+          {title: '3', value: 3},
+          {title: '4', value: 4},
+          {title: '5', value: 5},
+        ],
+      },
     },
     {
       title: '전기장치 x/5',
       name: 'evaluationElectronics',
       type: 'number',
+      options: {
+        layout: 'radio',
+        list: [
+          {title: '1', value: 1},
+          {title: '2', value: 2},
+          {title: '3', value: 3},
+          {title: '4', value: 4},
+          {title: '5', value: 5},
+        ],
+      },
     },
     {
       title: '도장상태 x/5',
       name: 'evaluationPainting',
       type: 'number',
+      options: {
+        layout: 'radio',
+        list: [
+          {title: '1', value: 1},
+          {title: '2', value: 2},
+          {title: '3', value: 3},
+          {title: '4', value: 4},
+          {title: '5', value: 5},
+        ],
+      },
     },
     {
       title: '엔진/파워트레인 x/5',
       name: 'evaluationEngine',
       type: 'number',
+      options: {
+        layout: 'radio',
+        list: [
+          {title: '1', value: 1},
+          {title: '2', value: 2},
+          {title: '3', value: 3},
+          {title: '4', value: 4},
+          {title: '5', value: 5},
+        ],
+      },
     },
     {
       title: '폐지 증명서 이상 유무',
       name: 'abolitionCertComment',
-      type: 'string',
+      type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '폐지 증명서 이미지',
@@ -106,7 +163,14 @@ export default {
     {
       title: '자동차 양도 증명서 / 도장 이상 유무',
       name: 'transferCertwithStampComment',
-      type: 'string',
+      type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '자동차 양도 증명서 / 도장 이미지',
@@ -117,6 +181,13 @@ export default {
       title: '셀러 신분증 사본 확보 여부',
       name: 'sellerIdCardComment',
       type: 'string',
+      options: {
+        list: [
+          {title: '완료', value: 'correct'},
+          {title: '진행중', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '셀러 신분증 이미지 확보 이미지',
@@ -159,6 +230,13 @@ export default {
       title: '엔진오일 이상 유무',
       name: 'isEngineOilError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '미션오일 양',
@@ -169,6 +247,13 @@ export default {
       title: '미션오일 이상 유무',
       name: 'isMissionOilError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '프라이머리오일 양',
@@ -179,6 +264,13 @@ export default {
       title: '프라이머리오일 이상 유무',
       name: 'isPrimaryOilError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'F 브레이크 오일 양',
@@ -189,6 +281,13 @@ export default {
       title: 'F 브레이크 오일 이상 유무',
       name: 'isFrontBrakeOilError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'R 브레이크 오일 양',
@@ -199,6 +298,13 @@ export default {
       title: 'R 브레이크 오일 이상 유무',
       name: 'isRearBrakeOilError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '타이어 코멘트',
@@ -226,6 +332,13 @@ export default {
       title: 'F 타이어 트레드 이상 유무',
       name: 'isFrontTireError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'R 타이어 트레드 깊이',
@@ -236,6 +349,13 @@ export default {
       title: 'R 타이어 트레드 이상 유무',
       name: 'isRearTireError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '브레이크 코멘트',
@@ -263,6 +383,13 @@ export default {
       title: 'F 브레이크 패드 이상 유무',
       name: 'isFrontBrakePadError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'R 브레이크 패드',
@@ -273,6 +400,13 @@ export default {
       title: 'R 브레이크 패드 이상 유무',
       name: 'isRearBrakePadError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'F 브레이크 디스크',
@@ -283,6 +417,13 @@ export default {
       title: 'F 브레이크 디스크 이상 유무',
       name: 'isFrontBrakeDiskError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'R 브레이크 디스크',
@@ -293,6 +434,13 @@ export default {
       title: 'R 브레이크 디스크 이상 유무',
       name: 'isRearBrakeDiskError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '기타 코멘트',
@@ -320,6 +468,13 @@ export default {
       title: '벨트 텐션 이상 유무',
       name: 'isBeltTensionError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '클러치 레버 유격',
@@ -330,6 +485,13 @@ export default {
       title: '클러치 레버 유격 이상 유무',
       name: 'isClutchLeverError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'F 브레이크 레버 유격',
@@ -340,6 +502,13 @@ export default {
       title: 'F 브레이크 레버 유격 이상 유무',
       name: 'isFrontBrakeError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: 'R 브레이크 레버 유격',
@@ -350,6 +519,13 @@ export default {
       title: 'R 브레이크 레버 유격 이상 유무',
       name: 'isRearBrakeError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '스파크 플러그',
@@ -360,6 +536,13 @@ export default {
       title: '스파크 플러그 이상 유무',
       name: 'isSparkPlugError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '충전 시스템 코멘트',
@@ -387,6 +570,13 @@ export default {
       title: '최초 배터리전압 이상 유무',
       name: 'isInitialVoltageError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '충전 전압',
@@ -397,6 +587,13 @@ export default {
       title: '충전 전압 이상 유무',
       name: 'isChargedVoltageError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '엔진 쿨다운(15분) 전압 회복 ',
@@ -407,11 +604,25 @@ export default {
       title: '엔진 쿨다운(15분) 전압 회복 이상 유무',
       name: 'isEngineCooldownVoltageError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '배터리 육안 검사 이상 유무',
       name: 'isBatteryLooksError',
       type: 'boolean',
+      options: {
+        list: [
+          {title: '이상 없음', value: 'correct'},
+          {title: '이상 있음', value: 'wrong'},
+        ],
+        layout: 'radio',
+      },
     },
     {
       title: '악세사리 ACC / 튜닝 코멘트',
@@ -424,11 +635,36 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'reference',
-          to: [{type: 'tuning'}],
+          type: 'object',
+          fields: [
+            {
+              title: '제품명',
+              name: 'accTuningName',
+              type: 'string',
+            },
+            {
+              title: '이미지',
+              name: 'accTuningImage',
+              type: 'image',
+            },
+            {
+              title: '위치',
+              name: 'accTuningLocation',
+              type: 'string',
+            },
+            {
+              title: '브랜드',
+              name: 'accTuningBrand',
+              type: 'string',
+            },
+            {
+              title: '상태',
+              name: 'accTuningGrade',
+              type: 'string',
+            },
+          ],
         },
       ],
-      validation: (Rule) => Rule.unique(),
     },
   ],
 }
