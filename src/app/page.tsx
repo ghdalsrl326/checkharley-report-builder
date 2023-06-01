@@ -1,5 +1,4 @@
-import LoginForm from "@/components/LoginForm";
-import Image from "next/image";
+import LoginForm from "@/components/SessionCheck";
 
 export default function Home() {
   return <LoginForm />;
