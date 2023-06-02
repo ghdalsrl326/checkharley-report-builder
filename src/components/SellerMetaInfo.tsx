@@ -30,7 +30,6 @@ const SellerMetaInfo = () => {
           <h4 className="text-sm font-bold">서울특별시 어쩌고 저쩌고</h4>
         </div>
       </div>
-      <ImageUpload />
       <Image
         className="w-10/12 mt-20"
         src={`/images/line_8.svg`}

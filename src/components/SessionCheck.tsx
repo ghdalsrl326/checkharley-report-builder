@@ -6,7 +6,7 @@ import { useSession, signIn } from "next-auth/react";
 //TODO
 //고객 전화번호, 차대번호, 날짜를 조합해 reportId 만들 예정. 다음은 사용 예시.
 //1. 사용자에게 url 제공: http://report-domain-origin/report/reportId
-//2. 최초 접속, 권한이 없으면 여기로 이동: http://report-domain-origin
+//2. 최초 접속, 해당 리포트에 권한이 없으면 여기로 이동: http://report-domain-origin
 //3. 로그인 후 1의 url 로 리다이렉션
 const SessionCheck = () => {
   const { data: session, status } = useSession();
