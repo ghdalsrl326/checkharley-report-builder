@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useSession, signIn } from "next-auth/react";
 
 //TODO
-//고객 전화번호, 차대번호, 날짜를 조합해 reportId 만들 예정. 다음은 사용 예시.
+//sanity에서 자동으로 부여하는 _id를 reportId로 사용. 다음은 사용 예시.
 //1. 사용자에게 url 제공: http://report-domain-origin/report/reportId
 //2. 최초 접속, 해당 리포트에 권한이 없으면 여기로 이동: http://report-domain-origin
 //3. 로그인 후 1의 url 로 리다이렉션

@@ -1,13 +1,21 @@
 import React from "react";
 import Image from "next/image";
-import ImageUpload from "./ImageUpload";
+import { SellerInfo } from "@/data/report.type";
+import { urlFor } from "@/service/sanity";
 
-const SellerMetaInfo = () => {
+const SellerInfo = ({
+  price,
+  sellerName,
+  sellerPhone,
+  bikeLocation,
+  salesArticleCaptureImage,
+  salesArticleURL,
+}: SellerInfo) => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-row justify-between w-10/12 mt-4 mb-11">
         <h3 className="text-2xl">셀러 판매 가격</h3>
-        <h3 className="text-2xl text-orange-600">12,000,000￦</h3>
+        <h3 className="text-2xl text-orange-600">{price.toLocaleString()}￦</h3>
       </div>
       <Image
         className="w-10/12"
@@ -19,16 +27,25 @@ const SellerMetaInfo = () => {
       <div className="flex flex-row justify-between w-10/12 mt-2 mb-8">
         <div className="flex gap-3">
           <h4 className="text-sm">이름</h4>
-          <h4 className="text-sm font-bold">오은화</h4>
+          <h4 className="text-sm font-bold">{sellerName}</h4>
         </div>
         <div className="flex gap-3">
           <h4 className="text-sm">연락처</h4>
-          <h4 className="text-sm font-bold">010-0000-0000</h4>
+          <h4 className="text-sm font-bold">{sellerPhone}</h4>
         </div>
         <div className="flex gap-3">
           <h4 className="text-sm">바이크 위치</h4>
-          <h4 className="text-sm font-bold">서울특별시 어쩌고 저쩌고</h4>
+          <h4 className="text-sm font-bold">{bikeLocation}</h4>
         </div>
+      </div>
+      <div className="flex flex-row justify-center w-10/12">
+        <a href={salesArticleURL}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={urlFor(salesArticleCaptureImage).fit("max").url()}
+            alt="salesArticleCaptureImage"
+          />
+        </a>
       </div>
       <Image
         className="w-10/12 mt-20"
@@ -41,4 +58,4 @@ const SellerMetaInfo = () => {
   );
 };
 
-export default SellerMetaInfo;
+export default SellerInfo;

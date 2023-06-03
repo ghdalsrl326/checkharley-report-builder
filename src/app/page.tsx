@@ -1,5 +1,6 @@
-import LoginForm from "@/components/SessionCheck";
+import SessionCheck from "@/components/SessionCheck";
 
+// SSR
 export default function Home() {
-  return <LoginForm />;
+  return <SessionCheck />;
 }
