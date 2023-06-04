@@ -1,5 +1,6 @@
-import BikeMetaInfo from "@/components/BikeInfo";
-import SellerMetaInfo from "@/components/SellerInfo";
+import BikeInfo from "@/components/BikeInfo";
+import EvaluationInfo from "@/components/EvaluationInfo";
+import SellerInfo from "@/components/SellerInfo";
 import { getReport } from "@/service/report";
 import React from "react";
 
@@ -90,20 +91,29 @@ const ReportPage = async () => {
 
   return (
     <>
-      <BikeMetaInfo
+      <BikeInfo
         mechanic={mechanic}
         bikeModelName={bikeModelName}
         bikeNumber={bikeNumber}
         modelYear={modelYear}
         mileage={mileage}
       />
-      <SellerMetaInfo
+      <SellerInfo
         price={price}
         sellerName={sellerName}
         sellerPhone={sellerPhone}
         bikeLocation={bikeLocation}
         salesArticleCaptureImage={salesArticleCaptureImage}
         salesArticleURL={salesArticleURL}
+      />
+      <EvaluationInfo
+        evaluationComment={evaluationComment}
+        evaluationGrade={evaluationGrade}
+        evaluationExterior={evaluationExterior}
+        evaluationExpendables={evaluationExpendables}
+        evaluationElectronics={evaluationElectronics}
+        evaluationPainting={evaluationPainting}
+        evaluationEngine={evaluationEngine}
       />
     </>
   );

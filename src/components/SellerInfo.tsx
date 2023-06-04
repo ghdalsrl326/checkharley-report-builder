@@ -24,7 +24,7 @@ const SellerInfo = ({
         width={760}
         height={31}
       />
-      <div className="flex flex-row justify-between w-10/12 mt-2 mb-8">
+      <div className="flex flex-row justify-between w-10/12 mt-2 mb-11">
         <div className="flex gap-3">
           <h4 className="text-sm">이름</h4>
           <h4 className="text-sm font-bold">{sellerName}</h4>
