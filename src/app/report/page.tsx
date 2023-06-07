@@ -17,15 +17,7 @@ const ReportPage = async () => {
     salesArticleCaptureImage,
     salesArticleURL,
   } = report;
-  const {
-    evaluationComment,
-    evaluationGrade,
-    evaluationExterior,
-    evaluationExpendables,
-    evaluationElectronics,
-    evaluationPainting,
-    evaluationEngine,
-  } = report;
+  const { evaluationComment } = report;
   const {
     abolitionCertComment,
     abolitionCertImage,
@@ -108,15 +100,7 @@ const ReportPage = async () => {
         salesArticleCaptureImage={salesArticleCaptureImage}
         salesArticleURL={salesArticleURL}
       />
-      <EvaluationInfo
-        evaluationComment={evaluationComment}
-        evaluationGrade={evaluationGrade}
-        evaluationExterior={evaluationExterior}
-        evaluationExpendables={evaluationExpendables}
-        evaluationElectronics={evaluationElectronics}
-        evaluationPainting={evaluationPainting}
-        evaluationEngine={evaluationEngine}
-      />
+      <EvaluationInfo evaluationComment={evaluationComment} />
       <CertInfo
         abolitionCertComment={abolitionCertComment}
         abolitionCertImage={abolitionCertImage}

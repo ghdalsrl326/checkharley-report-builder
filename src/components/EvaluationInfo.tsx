@@ -4,15 +4,7 @@ import { EvaluationInfo } from "@/data/report.type";
 import RadarChart from "./RadarChart";
 import MarkdownViewer from "./MarkdownViewer";
 
-const EvaluationInfo = ({
-  evaluationComment,
-  evaluationGrade,
-  evaluationExterior,
-  evaluationExpendables,
-  evaluationElectronics,
-  evaluationPainting,
-  evaluationEngine,
-}: EvaluationInfo) => {
+const EvaluationInfo = ({ evaluationComment }: EvaluationInfo) => {
   return (
     <div className="flex flex-col items-center">
       <div className="text-left w-10/12">
@@ -22,16 +14,7 @@ const EvaluationInfo = ({
         <section className="flex flex-col w-1/2">
           <MarkdownViewer content={evaluationComment} />
         </section>
-        <section className="w-6/12">
-          <RadarChart
-            evaluationGrade={evaluationGrade}
-            evaluationExterior={evaluationExterior}
-            evaluationExpendables={evaluationExpendables}
-            evaluationElectronics={evaluationElectronics}
-            evaluationPainting={evaluationPainting}
-            evaluationEngine={evaluationEngine}
-          />
-        </section>
+        <section className="w-6/12"></section>
       </div>
       <Image
         className="w-10/12 mt-20"

@@ -1,5 +1,3 @@
-type EvaluationScore = 1 | 2 | 3 | 4 | 5;
-
 export type ImageType = {
   _type: string;
   asset: {
@@ -22,12 +20,6 @@ export type Report = {
   salesArticleCaptureImage: ImageType;
   salesArticleURL: string;
   evaluationComment: string;
-  evaluationGrade: string;
-  evaluationExterior: EvaluationScore;
-  evaluationExpendables: EvaluationScore;
-  evaluationElectronics: EvaluationScore;
-  evaluationPainting: EvaluationScore;
-  evaluationEngine: EvaluationScore;
   abolitionCertComment: boolean;
   abolitionCertImage: ImageType;
   transferCertwithStampComment: boolean;
@@ -110,16 +102,7 @@ export type SellerInfo = Pick<
   | "salesArticleURL"
 >;
 
-export type EvaluationInfo = Pick<
-  Report,
-  | "evaluationComment"
-  | "evaluationGrade"
-  | "evaluationExterior"
-  | "evaluationExpendables"
-  | "evaluationElectronics"
-  | "evaluationPainting"
-  | "evaluationEngine"
->;
+export type EvaluationInfo = Pick<Report, "evaluationComment">;
 
 export type CertInfo = Pick<
   Report,
