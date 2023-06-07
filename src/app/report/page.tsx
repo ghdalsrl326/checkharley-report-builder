@@ -1,9 +1,11 @@
 import BikeInfo from "@/components/BikeInfo";
+import CertInfo from "@/components/CertInfo";
 import EvaluationInfo from "@/components/EvaluationInfo";
 import SellerInfo from "@/components/SellerInfo";
 import { getReport } from "@/service/report";
 import React from "react";
 
+//TDOO: 각 컴포넌트에서 쿼리 써서 받아오도록 수정
 const ReportPage = async () => {
   const report = await getReport("9bc7b286-98ca-41cd-8cde-c082261e5246");
   const { mechanic, bikeModelName, bikeNumber, modelYear, mileage } = report;
@@ -115,6 +117,17 @@ const ReportPage = async () => {
         evaluationPainting={evaluationPainting}
         evaluationEngine={evaluationEngine}
       />
+      <CertInfo
+        abolitionCertComment={abolitionCertComment}
+        abolitionCertImage={abolitionCertImage}
+        transferCertwithStampComment={transferCertwithStampComment}
+        transferCertwithStampImage={transferCertwithStampImage}
+        sellerIdCardComment={sellerIdCardComment}
+        sellerIdCardImage={sellerIdCardImage}
+        keyCountComment={keyCountComment}
+        keyCountImage={keyCountImage}
+      />
+      <div id="portal" />
     </>
   );
 };

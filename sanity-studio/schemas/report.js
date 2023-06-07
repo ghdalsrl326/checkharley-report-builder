@@ -180,7 +180,7 @@ export default {
     {
       title: '셀러 신분증 사본 확보 여부',
       name: 'sellerIdCardComment',
-      type: 'string',
+      type: 'boolean',
       options: {
         list: [
           {title: '완료', value: 'correct'},
