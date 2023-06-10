@@ -20,63 +20,63 @@ export type Report = {
   salesArticleCaptureImage: ImageType;
   salesArticleURL: string;
   evaluationComment: string;
-  abolitionCertComment: boolean;
+  abolitionCertCondition: string;
   abolitionCertImage: ImageType;
-  transferCertwithStampComment: boolean;
+  transferCertwithStampCondition: string;
   transferCertwithStampImage: ImageType;
-  sellerIdCardComment: boolean;
+  sellerIdCardCondition: string;
   sellerIdCardImage: ImageType;
-  keyCountComment: string;
+  keyCountCondition: string;
   keyCountImage: ImageType;
   oilComment: string;
   oilImages: ImageType[];
   engineOilMeasure: string;
-  isEngineOilError: boolean;
+  engineOilCondition: string;
   missionOilMeasure: string;
-  isMissionOilError: boolean;
+  missionOilCondition: string;
   primaryOilMeasure: string;
-  isPrimaryOilError: boolean;
+  primaryOilCondition: string;
   frontBrakeOilMeasure: string;
-  isFrontBrakeOilError: boolean;
+  frontBrakeOilCondition: string;
   rearBrakeOilMeasure: string;
-  isRearBrakeOilError: boolean;
+  rearBrakeOilCondition: string;
   tireComment: string;
   tireImages: ImageType[];
   frontTireMeasure: string;
-  isFrontTireError: boolean;
+  frontTireCondition: string;
   rearTireMeasure: string;
-  isRearTireError: boolean;
+  rearTireCondition: string;
   brakeComment: string;
   brakeImages: ImageType[];
   frontBrakePadMeasure: string;
-  isFrontBrakePadError: boolean;
+  frontBrakePadCondition: string;
   rearBrakePadMeasure: string;
-  isRearBrakePadError: boolean;
+  rearBrakePadCondition: string;
   frontBrakeDiskMeasure: string;
-  isFrontBrakeDiskError: boolean;
+  frontBrakeDiskCondition: string;
   rearBrakeDiskMeasure: string;
-  isRearBrakeDiskError: boolean;
+  rearBrakeDiskCondition: string;
   extraComment: string;
   extraImages: ImageType[];
   beltTensionMeasure: string;
-  isBeltTensionError: boolean;
+  beltTensionCondition: string;
   clutchLeverMeasure: string;
-  isClutchLeverError: boolean;
+  clutchLeverCondition: string;
   frontBrakeMeasure: string;
-  isFrontBrakeError: boolean;
+  frontBrakeCondition: string;
   rearBrakeMeasure: string;
-  isRearBrakeError: boolean;
+  rearBrakeCondition: string;
   sparkPlugMeasure: string;
-  isSparkPlugError: boolean;
+  sparkPlugCondition: string;
   chargingSystemComment: string;
   chargingSystemImages: ImageType[];
   initialVoltageMeasure: string;
-  isInitialVoltageError: boolean;
+  initialVoltageCondition: string;
   chargedVoltageMeasure: string;
-  isChargedVoltageError: boolean;
+  chargedVoltageCondition: string;
   engineCooldownVoltageMeasure: string;
-  isEngineCooldownVoltageError: boolean;
-  isBatteryLooksError: boolean;
+  engineCooldownVoltageCondition: string;
+  batteryLooksCondition: string;
   accTuningComment: string;
   accTuningList: {
     accTuningName: string;
@@ -106,13 +106,13 @@ export type EvaluationInfo = Pick<Report, "evaluationComment">;
 
 export type CertInfo = Pick<
   Report,
-  | "abolitionCertComment"
+  | "abolitionCertCondition"
   | "abolitionCertImage"
-  | "transferCertwithStampComment"
+  | "transferCertwithStampCondition"
   | "transferCertwithStampImage"
-  | "sellerIdCardComment"
+  | "sellerIdCardCondition"
   | "sellerIdCardImage"
-  | "keyCountComment"
+  | "keyCountCondition"
   | "keyCountImage"
 >;
 
@@ -121,43 +121,43 @@ export type ExpendablesInfo = Pick<
   | "oilComment"
   | "oilImages"
   | "engineOilMeasure"
-  | "isEngineOilError"
+  | "engineOilCondition"
   | "missionOilMeasure"
-  | "isMissionOilError"
+  | "missionOilCondition"
   | "primaryOilMeasure"
-  | "isPrimaryOilError"
+  | "primaryOilCondition"
   | "frontBrakeOilMeasure"
-  | "isFrontBrakeOilError"
+  | "frontBrakeOilCondition"
   | "rearBrakeOilMeasure"
-  | "isRearBrakeOilError"
+  | "rearBrakeOilCondition"
   | "tireComment"
   | "tireImages"
   | "frontTireMeasure"
-  | "isFrontTireError"
+  | "frontTireCondition"
   | "rearTireMeasure"
-  | "isRearTireError"
+  | "rearTireCondition"
   | "brakeComment"
   | "brakeImages"
   | "frontBrakePadMeasure"
-  | "isFrontBrakePadError"
+  | "frontBrakePadCondition"
   | "rearBrakePadMeasure"
-  | "isRearBrakePadError"
+  | "rearBrakePadCondition"
   | "frontBrakeDiskMeasure"
-  | "isFrontBrakeDiskError"
+  | "frontBrakeDiskCondition"
   | "rearBrakeDiskMeasure"
-  | "isRearBrakeDiskError"
+  | "rearBrakeDiskCondition"
   | "extraComment"
   | "extraImages"
   | "beltTensionMeasure"
-  | "isBeltTensionError"
+  | "beltTensionCondition"
   | "clutchLeverMeasure"
-  | "isClutchLeverError"
+  | "clutchLeverCondition"
   | "frontBrakeMeasure"
-  | "isFrontBrakeError"
+  | "frontBrakeCondition"
   | "rearBrakeMeasure"
-  | "isRearBrakeError"
+  | "rearBrakeCondition"
   | "sparkPlugMeasure"
-  | "isSparkPlugError"
+  | "sparkPlugCondition"
 >;
 
 export type ElectronicsInfo = Pick<
@@ -165,12 +165,12 @@ export type ElectronicsInfo = Pick<
   | "chargingSystemComment"
   | "chargingSystemImages"
   | "initialVoltageMeasure"
-  | "isInitialVoltageError"
+  | "initialVoltageCondition"
   | "chargedVoltageMeasure"
-  | "isChargedVoltageError"
+  | "chargedVoltageCondition"
   | "engineCooldownVoltageMeasure"
-  | "isEngineCooldownVoltageError"
-  | "isBatteryLooksError"
+  | "engineCooldownVoltageCondition"
+  | "batteryLooksCondition"
 >;
 
 export type TuningInfo = Pick<Report, "accTuningComment" | "accTuningList">;

@@ -7,13 +7,13 @@ import ImageModal from "./ImageModal";
 import { urlFor } from "@/service/sanity";
 
 const CertInfo = ({
-  abolitionCertComment,
+  abolitionCertCondition,
   abolitionCertImage,
-  transferCertwithStampComment,
+  transferCertwithStampCondition,
   transferCertwithStampImage,
-  sellerIdCardComment,
+  sellerIdCardCondition,
   sellerIdCardImage,
-  keyCountComment,
+  keyCountCondition,
   keyCountImage,
 }: CertInfo) => {
   const [openModal, setOpenModal] = useState(false);
@@ -37,7 +37,7 @@ const CertInfo = ({
         >
           <h4>✔️ 폐지 증명서</h4>
           <h4 className="font-bold">
-            {abolitionCertComment ? "이상있음" : "이상없음"}
+            {abolitionCertCondition ? "이상있음" : "이상없음"}
           </h4>
         </button>
         <button
@@ -49,7 +49,7 @@ const CertInfo = ({
         >
           <h4>✔️ 자동차 양도 증명서</h4>
           <h4 className="font-bold">
-            {transferCertwithStampComment ? "이상있음" : "이상없음"}
+            {transferCertwithStampCondition ? "이상있음" : "이상없음"}
           </h4>
         </button>
         <button
@@ -61,7 +61,7 @@ const CertInfo = ({
         >
           <h4>✔️ 셀러 신분증 사본 확보</h4>
           <h4 className="font-bold">
-            {sellerIdCardComment ? "완료" : "진행중"}
+            {sellerIdCardCondition ? "완료" : "진행중"}
           </h4>
         </button>
         <button
@@ -72,7 +72,7 @@ const CertInfo = ({
           }}
         >
           <h4>✔️ 열쇠 개수 (키팝/열쇠)</h4>
-          <h4 className="font-bold">{keyCountComment}</h4>
+          <h4 className="font-bold">{keyCountCondition}</h4>
         </button>
       </div>
       {openModal && (
@@ -81,7 +81,7 @@ const CertInfo = ({
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={urlFor(image).fit("max").url()}
-              alt="abolitionCertComment"
+              alt="abolitionCertCondition"
             />
           </ImageModal>
         </ModalPortal>

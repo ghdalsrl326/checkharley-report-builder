@@ -65,12 +65,12 @@ export default {
     },
     {
       title: '폐지 증명서 이상 유무',
-      name: 'abolitionCertComment',
-      type: 'boolean',
+      name: 'abolitionCertCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
         ],
         layout: 'radio',
       },
@@ -82,12 +82,12 @@ export default {
     },
     {
       title: '자동차 양도 증명서 / 도장 이상 유무',
-      name: 'transferCertwithStampComment',
-      type: 'boolean',
+      name: 'transferCertwithStampCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
         ],
         layout: 'radio',
       },
@@ -99,12 +99,12 @@ export default {
     },
     {
       title: '셀러 신분증 사본 확보 여부',
-      name: 'sellerIdCardComment',
-      type: 'boolean',
+      name: 'sellerIdCardCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '완료', value: 'correct'},
-          {title: '진행중', value: 'wrong'},
+          {title: '완료', value: '완료'},
+          {title: '진행중', value: '진행중'},
         ],
         layout: 'radio',
       },
@@ -116,7 +116,7 @@ export default {
     },
     {
       title: '열쇠 개수 (키팝/열쇠)',
-      name: 'keyCountComment',
+      name: 'keyCountCondition',
       type: 'string',
     },
     {
@@ -148,12 +148,14 @@ export default {
     },
     {
       title: '엔진오일 이상 유무',
-      name: 'isEngineOilError',
-      type: 'boolean',
+      name: 'engineOilCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -165,12 +167,14 @@ export default {
     },
     {
       title: '미션오일 이상 유무',
-      name: 'isMissionOilError',
-      type: 'boolean',
+      name: 'missionOilCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -182,12 +186,14 @@ export default {
     },
     {
       title: '프라이머리오일 이상 유무',
-      name: 'isPrimaryOilError',
-      type: 'boolean',
+      name: 'primaryOilCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -199,12 +205,14 @@ export default {
     },
     {
       title: 'F 브레이크 오일 이상 유무',
-      name: 'isFrontBrakeOilError',
-      type: 'boolean',
+      name: 'frontBrakeOilCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -216,12 +224,14 @@ export default {
     },
     {
       title: 'R 브레이크 오일 이상 유무',
-      name: 'isRearBrakeOilError',
-      type: 'boolean',
+      name: 'rearBrakeOilCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -250,12 +260,14 @@ export default {
     },
     {
       title: 'F 타이어 트레드 이상 유무',
-      name: 'isFrontTireError',
-      type: 'boolean',
+      name: 'frontTireCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -267,12 +279,14 @@ export default {
     },
     {
       title: 'R 타이어 트레드 이상 유무',
-      name: 'isRearTireError',
-      type: 'boolean',
+      name: 'rearTireCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -301,12 +315,14 @@ export default {
     },
     {
       title: 'F 브레이크 패드 이상 유무',
-      name: 'isFrontBrakePadError',
-      type: 'boolean',
+      name: 'frontBrakePadCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -318,12 +334,14 @@ export default {
     },
     {
       title: 'R 브레이크 패드 이상 유무',
-      name: 'isRearBrakePadError',
-      type: 'boolean',
+      name: 'rearBrakePadCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -335,12 +353,14 @@ export default {
     },
     {
       title: 'F 브레이크 디스크 이상 유무',
-      name: 'isFrontBrakeDiskError',
-      type: 'boolean',
+      name: 'frontBrakeDiskCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -352,12 +372,14 @@ export default {
     },
     {
       title: 'R 브레이크 디스크 이상 유무',
-      name: 'isRearBrakeDiskError',
-      type: 'boolean',
+      name: 'rearBrakeDiskCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -386,12 +408,14 @@ export default {
     },
     {
       title: '벨트 텐션 이상 유무',
-      name: 'isBeltTensionError',
-      type: 'boolean',
+      name: 'beltTensionCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -403,12 +427,14 @@ export default {
     },
     {
       title: '클러치 레버 유격 이상 유무',
-      name: 'isClutchLeverError',
-      type: 'boolean',
+      name: 'clutchLeverCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -420,12 +446,14 @@ export default {
     },
     {
       title: 'F 브레이크 레버 유격 이상 유무',
-      name: 'isFrontBrakeError',
-      type: 'boolean',
+      name: 'frontBrakeCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -437,12 +465,14 @@ export default {
     },
     {
       title: 'R 브레이크 레버 유격 이상 유무',
-      name: 'isRearBrakeError',
-      type: 'boolean',
+      name: 'rearBrakeCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -454,12 +484,14 @@ export default {
     },
     {
       title: '스파크 플러그 이상 유무',
-      name: 'isSparkPlugError',
-      type: 'boolean',
+      name: 'sparkPlugCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+          {title: '확인필요', value: '확인필요'},
+          {title: '해당없음', value: '해당없음'},
         ],
         layout: 'radio',
       },
@@ -488,12 +520,12 @@ export default {
     },
     {
       title: '최초 배터리전압 이상 유무',
-      name: 'isInitialVoltageError',
-      type: 'boolean',
+      name: 'initialVoltageCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
         ],
         layout: 'radio',
       },
@@ -505,12 +537,12 @@ export default {
     },
     {
       title: '충전 전압 이상 유무',
-      name: 'isChargedVoltageError',
-      type: 'boolean',
+      name: 'chargedVoltageCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
         ],
         layout: 'radio',
       },
@@ -522,24 +554,24 @@ export default {
     },
     {
       title: '엔진 쿨다운(15분) 전압 회복 이상 유무',
-      name: 'isEngineCooldownVoltageError',
-      type: 'boolean',
+      name: 'engineCooldownVoltageCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
         ],
         layout: 'radio',
       },
     },
     {
       title: '배터리 육안 검사 이상 유무',
-      name: 'isBatteryLooksError',
-      type: 'boolean',
+      name: 'batteryLooksCondition',
+      type: 'string',
       options: {
         list: [
-          {title: '이상 없음', value: 'correct'},
-          {title: '이상 있음', value: 'wrong'},
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
         ],
         layout: 'radio',
       },
