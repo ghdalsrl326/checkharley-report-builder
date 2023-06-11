@@ -1,5 +1,5 @@
 import React from "react";
-import { GrClose } from "react-icons/gr";
+import { GrClose as CloseIcon } from "react-icons/gr";
 
 type Props = {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ const ImageModal = ({ children, onClose }: Props) => {
         className="fixed top-0 right-0 p-8 text-white"
         onClick={() => onClose()}
       >
-        <GrClose />
+        <CloseIcon />
       </button>
       {children}
     </section>

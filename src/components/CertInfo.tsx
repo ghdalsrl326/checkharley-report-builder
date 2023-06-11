@@ -79,10 +79,7 @@ const CertInfo = ({
         <ModalPortal>
           <ImageModal onClose={() => setOpenModal(false)}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={urlFor(image).fit("max").url()}
-              alt="abolitionCertCondition"
-            />
+            <img src={urlFor(image).fit("max").url()} alt="certImage" />
           </ImageModal>
         </ModalPortal>
       )}

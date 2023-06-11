@@ -10,20 +10,30 @@ const SummaryBoard = (props: ExpendablesInfo) => {
   const [notApplicableCount, setNotApplicableCount] = useState<number>(0);
 
   function count(props: ExpendablesInfo) {
+    let tempCorrectCount = 0;
+    let tempErrorCount = 0;
+    let tempNeedCheckCount = 0;
+    let tempNotApplicableCount = 0;
+
     for (const value of Object.values(props)) {
       if (typeof value === "string" && value === "이상없음") {
-        setCorrectCount((prev) => prev + 1);
+        tempCorrectCount += 1;
       }
       if (typeof value === "string" && value === "이상있음") {
-        setErrorCount((prev) => prev + 1);
+        tempErrorCount += 1;
       }
       if (typeof value === "string" && value === "확인필요") {
-        setNeedCheckCount((prev) => prev + 1);
+        tempNeedCheckCount += 1;
       }
       if (typeof value === "string" && value === "해당없음") {
-        setNotApplicableCount((prev) => prev + 1);
+        tempNotApplicableCount += 1;
       }
     }
+
+    setCorrectCount(tempCorrectCount);
+    setErrorCount(tempErrorCount);
+    setNeedCheckCount(tempNeedCheckCount);
+    setNotApplicableCount(tempNotApplicableCount);
   }
 
   useEffect(() => {
@@ -31,7 +41,7 @@ const SummaryBoard = (props: ExpendablesInfo) => {
   }, [props]);
 
   return (
-    <section className="w-10/12">
+    <section className="w-10/12 mb-14">
       <div className="flex flex-row gap-2 items-center mb-6">
         <h4 className="text-2xl text-gray-900 opacity-60">검수 항목</h4>
         <p className="text-xl text-gray-900 opacity-60">{`총 ${
