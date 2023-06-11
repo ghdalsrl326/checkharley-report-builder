@@ -29,7 +29,22 @@ const ExpendablesInfo = (props: ExpendablesInfo) => {
           <AccordionSection
             startAdornment={OilIcon}
             title="오일"
-            props={props}
+            comment={props.oilComment}
+            images={props.oilImages}
+            measures={[
+              props.engineOilMeasure,
+              props.missionOilMeasure,
+              props.primaryOilMeasure,
+              props.frontBrakeOilMeasure,
+              props.rearBrakeOilMeasure,
+            ]}
+            conditions={[
+              props.engineOilCondition,
+              props.missionOilCondition,
+              props.primaryOilCondition,
+              props.frontBrakeOilCondition,
+              props.rearBrakeOilCondition,
+            ]}
           />
         </>
       )}
