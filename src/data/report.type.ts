@@ -62,10 +62,10 @@ export type Report = {
   beltTensionCondition: string;
   clutchLeverMeasure: string;
   clutchLeverCondition: string;
-  frontBrakeMeasure: string;
-  frontBrakeCondition: string;
-  rearBrakeMeasure: string;
-  rearBrakeCondition: string;
+  frontBrakeLeverMeasure: string;
+  frontBrakeLeverCondition: string;
+  rearBrakeLeverMeasure: string;
+  rearBrakeLeverCondition: string;
   sparkPlugMeasure: string;
   sparkPlugCondition: string;
   chargingSystemComment: string;
@@ -152,10 +152,10 @@ export type ExpendablesInfo = Pick<
   | "beltTensionCondition"
   | "clutchLeverMeasure"
   | "clutchLeverCondition"
-  | "frontBrakeMeasure"
-  | "frontBrakeCondition"
-  | "rearBrakeMeasure"
-  | "rearBrakeCondition"
+  | "frontBrakeLeverMeasure"
+  | "frontBrakeLeverCondition"
+  | "rearBrakeLeverMeasure"
+  | "rearBrakeLeverCondition"
   | "sparkPlugMeasure"
   | "sparkPlugCondition"
 >;

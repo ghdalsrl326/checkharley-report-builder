@@ -441,12 +441,12 @@ export default {
     },
     {
       title: 'F 브레이크 레버 유격',
-      name: 'frontBrakeMeasure',
+      name: 'frontBrakeLeverMeasure',
       type: 'string',
     },
     {
       title: 'F 브레이크 레버 유격 이상 유무',
-      name: 'frontBrakeCondition',
+      name: 'frontBrakeLeverCondition',
       type: 'string',
       options: {
         list: [
@@ -460,12 +460,12 @@ export default {
     },
     {
       title: 'R 브레이크 레버 유격',
-      name: 'rearBrakeMeasure',
+      name: 'rearBrakeLeverMeasure',
       type: 'string',
     },
     {
       title: 'R 브레이크 레버 유격 이상 유무',
-      name: 'rearBrakeCondition',
+      name: 'rearBrakeLeverCondition',
       type: 'string',
       options: {
         list: [

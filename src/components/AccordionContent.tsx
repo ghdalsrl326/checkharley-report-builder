@@ -10,7 +10,7 @@ type Props = {
   comment: string;
   images: ImageType[];
   items: {
-    title: string;
+    subTitle: string;
     measure: string;
     condition: string;
   }[];
@@ -39,7 +39,7 @@ const AccordionContent = ({ comment, images, items }: Props) => {
         {items.map((item, index) => (
           <AccordionItem
             key={index}
-            title={item.title}
+            title={item.subTitle}
             measure={item.measure}
             condition={item.condition}
           />
