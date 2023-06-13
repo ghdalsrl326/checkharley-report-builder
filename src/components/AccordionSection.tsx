@@ -4,6 +4,7 @@ import { IconType } from "react-icons";
 import { BsChevronUp as ArrowUpIcon } from "react-icons/bs";
 import { ImageType } from "@/data/report.type";
 import AccordionContent from "./AccordionContent";
+import Image from "next/image";
 
 type Props = {
   startAdornment: IconType;
@@ -52,15 +53,24 @@ const AccordionSection = ({
         </div>
       </span>
       {openAccordion && (
-        <AccordionContent
-          comment={comment}
-          images={images}
-          items={measures.map((measure, index) => ({
-            subTitle: subTitles[index],
-            measure: measure,
-            condition: conditions[index],
-          }))}
-        />
+        <>
+          <Image
+            className="w-full"
+            src={`/images/line_1.svg`}
+            alt={"line_1"}
+            width={760}
+            height={31}
+          />
+          <AccordionContent
+            comment={comment}
+            images={images}
+            items={measures.map((measure, index) => ({
+              subTitle: subTitles[index],
+              measure: measure,
+              condition: conditions[index],
+            }))}
+          />
+        </>
       )}
     </section>
   );

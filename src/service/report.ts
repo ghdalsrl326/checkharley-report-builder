@@ -96,12 +96,12 @@ export async function getElectronicsInfo(
       chargingSystemComment,
       chargingSystemImages,
       initialVoltageMeasure,
-      isInitialVoltageError,
+      initialVoltageCondition,
       chargedVoltageMeasure,
-      isChargedVoltageError,
+      chargedVoltageCondition,
       engineCooldownVoltageMeasure,
-      isEngineCooldownVoltageError,
-      isBatteryLooksError}`
+      engineCooldownVoltageCondition,
+      batteryLooksCondition}`
   );
 }
 

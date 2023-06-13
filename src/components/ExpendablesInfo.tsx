@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { ExpendablesInfo } from "@/data/report.type";
 import { BsChevronUp as ArrowUpIcon } from "react-icons/bs";
 import { BsSignStopFill as StopIcon } from "react-icons/bs";
@@ -118,6 +119,13 @@ const ExpendablesInfo = (props: ExpendablesInfo) => {
           />
         </>
       )}
+      <Image
+        className="w-10/12"
+        src={`/images/line_1.svg`}
+        alt={"line_1"}
+        width={760}
+        height={31}
+      />
     </section>
   );
 };
