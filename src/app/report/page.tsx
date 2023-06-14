@@ -1,3 +1,4 @@
+import AccTuningInfo from "@/components/AccTuningInfo";
 import BikeInfo from "@/components/BikeInfo";
 import CertInfo from "@/components/CertInfo";
 import ElectronicsInfo from "@/components/ElectronicsInfo";
@@ -12,15 +13,13 @@ import {
   getCertInfo,
   getExpendablesInfo,
   getElectronicsInfo,
-  getTuningInfo,
+  getAccTuningInfo,
   getPaintingsInfo,
 } from "@/service/report";
 import React from "react";
 
-//TDOO: 각 컴포넌트에서 쿼리 써서 받아오도록 수정
 const ReportPage = async () => {
   const reportId = "9bc7b286-98ca-41cd-8cde-c082261e5246";
-
   const bikeInfo = await getBikeInfo(reportId);
   const sellerInfo = await getSellerInfo(reportId);
   const evaluationComment = await getEvaluationComment(reportId);
@@ -28,7 +27,7 @@ const ReportPage = async () => {
   const expendablesInfo = await getExpendablesInfo(reportId);
   const electronicsInfo = await getElectronicsInfo(reportId);
   const paintingsInfo = await getPaintingsInfo(reportId);
-  const tuningInfo = await getTuningInfo(reportId);
+  const accTuningInfo = await getAccTuningInfo(reportId);
 
   return (
     <>
@@ -39,7 +38,7 @@ const ReportPage = async () => {
       <ExpendablesInfo {...expendablesInfo} />
       <ElectronicsInfo {...electronicsInfo} />
       <PaintingsInfo {...paintingsInfo} />
-      {/* <TuningInfo {...tuningInfo} /> */}
+      <AccTuningInfo {...accTuningInfo} />
       <div id="portal" />
     </>
   );

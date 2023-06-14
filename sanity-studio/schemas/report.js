@@ -732,6 +732,26 @@ export default {
               title: '상태',
               name: 'accTuningGrade',
               type: 'string',
+              options: {
+                list: [
+                  {title: '상', value: '상'},
+                  {title: '중', value: '중'},
+                  {title: '하', value: '하'},
+                ],
+                layout: 'radio',
+              },
+            },
+            {
+              title: '악세사리 이상 유무',
+              name: 'accTuningCondition',
+              type: 'string',
+              options: {
+                list: [
+                  {title: '이상없음', value: '이상없음'},
+                  {title: '이상있음', value: '이상있음'},
+                ],
+                layout: 'radio',
+              },
             },
           ],
         },

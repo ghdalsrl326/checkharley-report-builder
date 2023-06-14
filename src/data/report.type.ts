@@ -205,4 +205,4 @@ export type PaintingsInfo = Pick<
   | "tourBagCondition"
 >;
 
-export type TuningInfo = Pick<Report, "accTuningComment" | "accTuningList">;
+export type AccTuningInfo = Pick<Report, "accTuningComment" | "accTuningList">;

@@ -128,7 +128,7 @@ export async function getPaintingsInfo(
   );
 }
 
-export async function getTuningInfo(reportId: string): Promise<TuningInfo> {
+export async function getAccTuningInfo(reportId: string): Promise<TuningInfo> {
   return client.fetch(
     `*[_type == "report" && _id == "${reportId}"][0]{
       accTuningComment,
