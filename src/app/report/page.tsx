@@ -3,6 +3,7 @@ import CertInfo from "@/components/CertInfo";
 import ElectronicsInfo from "@/components/ElectronicsInfo";
 import EvaluationInfo from "@/components/EvaluationInfo";
 import ExpendablesInfo from "@/components/ExpendablesInfo";
+import PaintingsInfo from "@/components/PaintingsInfo";
 import SellerInfo from "@/components/SellerInfo";
 import {
   getBikeInfo,
@@ -12,6 +13,7 @@ import {
   getExpendablesInfo,
   getElectronicsInfo,
   getTuningInfo,
+  getPaintingsInfo,
 } from "@/service/report";
 import React from "react";
 
@@ -25,6 +27,7 @@ const ReportPage = async () => {
   const certInfo = await getCertInfo(reportId);
   const expendablesInfo = await getExpendablesInfo(reportId);
   const electronicsInfo = await getElectronicsInfo(reportId);
+  const paintingsInfo = await getPaintingsInfo(reportId);
   const tuningInfo = await getTuningInfo(reportId);
 
   return (
@@ -35,6 +38,7 @@ const ReportPage = async () => {
       <CertInfo {...certInfo} />
       <ExpendablesInfo {...expendablesInfo} />
       <ElectronicsInfo {...electronicsInfo} />
+      <PaintingsInfo {...paintingsInfo} />
       {/* <TuningInfo {...tuningInfo} /> */}
       <div id="portal" />
     </>

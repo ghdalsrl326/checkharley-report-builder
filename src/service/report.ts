@@ -7,6 +7,7 @@ import {
   ExpendablesInfo,
   ElectronicsInfo,
   TuningInfo,
+  PaintingsInfo,
 } from "@/data/report.type";
 import { client } from "./sanity";
 
@@ -102,6 +103,28 @@ export async function getElectronicsInfo(
       engineCooldownVoltageMeasure,
       engineCooldownVoltageCondition,
       batteryLooksCondition}`
+  );
+}
+
+export async function getPaintingsInfo(
+  reportId: string
+): Promise<PaintingsInfo> {
+  return client.fetch(
+    `*[_type == "report" && _id == "${reportId}"][0]{
+      paintingsComment,
+      paintingsImages,
+      frontFenderMeasure,
+      frontFenderCondition,
+      rearFenderMeasure,
+      rearFenderCondition,
+      fuelTankMeasure,
+      fuelTankCondition,
+      sideCoverMeasure,
+      sideCoverCondition,
+      saddleBagMeasure,
+      saddleBagCondition,
+      tourBagMeasure,
+      tourBagCondition}`
   );
 }
 

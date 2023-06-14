@@ -577,6 +577,125 @@ export default {
       },
     },
     {
+      title: '도장 도막 코멘트',
+      name: 'paintingsComment',
+      type: 'string',
+    },
+    {
+      title: '도장 도막 이미지 리스트',
+      name: 'paintingsImages',
+      type: 'array',
+      of: [
+        {
+          title: '도장 도막 이미지',
+          name: 'paintingsImage',
+          type: 'image',
+        },
+      ],
+    },
+    {
+      title: 'F 휀다',
+      name: 'frontFenderMeasure',
+      type: 'string',
+    },
+    {
+      title: 'F 휀다 이상 유무',
+      name: 'frontFenderCondition',
+      type: 'string',
+      options: {
+        list: [
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+        ],
+        layout: 'radio',
+      },
+    },
+    {
+      title: 'R 휀다',
+      name: 'rearFenderMeasure',
+      type: 'string',
+    },
+    {
+      title: 'R 휀다 이상 유무',
+      name: 'rearFenderCondition',
+      type: 'string',
+      options: {
+        list: [
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+        ],
+        layout: 'radio',
+      },
+    },
+    {
+      title: '연료 탱크',
+      name: 'fuelTankMeasure',
+      type: 'string',
+    },
+    {
+      title: '연료 탱크 이상 유무',
+      name: 'fuelTankCondition',
+      type: 'string',
+      options: {
+        list: [
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+        ],
+        layout: 'radio',
+      },
+    },
+    {
+      title: '사이드 커버',
+      name: 'sideCoverMeasure',
+      type: 'string',
+    },
+    {
+      title: '사이드 커버 이상 유무',
+      name: 'sideCoverCondition',
+      type: 'string',
+      options: {
+        list: [
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+        ],
+        layout: 'radio',
+      },
+    },
+    {
+      title: '새들백',
+      name: 'saddleBagMeasure',
+      type: 'string',
+    },
+    {
+      title: '새들백 이상 유무',
+      name: 'saddleBagCondition',
+      type: 'string',
+      options: {
+        list: [
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+        ],
+        layout: 'radio',
+      },
+    },
+    {
+      title: '투어백',
+      name: 'tourBagMeasure',
+      type: 'string',
+    },
+    {
+      title: '투어백 이상 유무',
+      name: 'tourBagCondition',
+      type: 'string',
+      options: {
+        list: [
+          {title: '이상없음', value: '이상없음'},
+          {title: '이상있음', value: '이상있음'},
+        ],
+        layout: 'radio',
+      },
+    },
+    {
       title: '악세사리 ACC / 튜닝 코멘트',
       name: 'accTuningComment',
       type: 'string',

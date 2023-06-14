@@ -77,6 +77,20 @@ export type Report = {
   engineCooldownVoltageMeasure: string;
   engineCooldownVoltageCondition: string;
   batteryLooksCondition: string;
+  paintingsComment: string;
+  paintingsImages: ImageType[];
+  frontFenderMeasure: string;
+  frontFenderCondition: string;
+  rearFenderMeasure: string;
+  rearFenderCondition: string;
+  fuelTankMeasure: string;
+  fuelTankCondition: string;
+  sideCoverMeasure: string;
+  sideCoverCondition: string;
+  saddleBagMeasure: string;
+  saddleBagCondition: string;
+  tourBagMeasure: string;
+  tourBagCondition: string;
   accTuningComment: string;
   accTuningList: {
     accTuningName: string;
@@ -171,6 +185,24 @@ export type ElectronicsInfo = Pick<
   | "engineCooldownVoltageMeasure"
   | "engineCooldownVoltageCondition"
   | "batteryLooksCondition"
+>;
+
+export type PaintingsInfo = Pick<
+  Report,
+  | "paintingsComment"
+  | "paintingsImages"
+  | "frontFenderMeasure"
+  | "frontFenderCondition"
+  | "rearFenderMeasure"
+  | "rearFenderCondition"
+  | "fuelTankMeasure"
+  | "fuelTankCondition"
+  | "sideCoverMeasure"
+  | "sideCoverCondition"
+  | "saddleBagMeasure"
+  | "saddleBagCondition"
+  | "tourBagMeasure"
+  | "tourBagCondition"
 >;
 
 export type TuningInfo = Pick<Report, "accTuningComment" | "accTuningList">;
