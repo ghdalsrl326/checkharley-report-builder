@@ -50,7 +50,7 @@ const ElectronicsInfo = (props: ElectronicsInfo) => {
                 condition: props.batteryLooksCondition,
               },
             ]}
-            // variant="chargingSystem"
+            variant="chargingSystem"
           />
         </section>
       )}

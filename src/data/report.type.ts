@@ -92,13 +92,7 @@ export type Report = {
   tourBagMeasure: string;
   tourBagCondition: string;
   accTuningComment: string;
-  accTuningList: {
-    accTuningName: string;
-    accTuningImage: ImageType;
-    accTuningLocation: string;
-    accTuningBrand: string;
-    accTuningGrade: string;
-  }[];
+  accTuningList: AccTuningType[];
 };
 
 export type BikeInfo = Pick<
@@ -204,5 +198,14 @@ export type PaintingsInfo = Pick<
   | "tourBagMeasure"
   | "tourBagCondition"
 >;
+
+export type AccTuningType = {
+  accTuningName: string;
+  accTuningImage: ImageType;
+  accTuningLocation: string;
+  accTuningBrand: string;
+  accTuningGrade: string;
+  accTuningCondition: string;
+};
 
 export type AccTuningInfo = Pick<Report, "accTuningComment" | "accTuningList">;

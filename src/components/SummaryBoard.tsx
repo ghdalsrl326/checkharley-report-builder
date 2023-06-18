@@ -1,32 +1,55 @@
 "use client";
-import { ExpendablesInfo } from "@/data/report.type";
+import { AccTuningInfo, ExpendablesInfo } from "@/data/report.type";
 import React, { useEffect, useState } from "react";
 import RingChart from "./RingChart";
 
-const SummaryBoard = (props: ExpendablesInfo) => {
+const SummaryBoard = (props: ExpendablesInfo | AccTuningInfo) => {
   const [correctCount, setCorrectCount] = useState<number>(0);
   const [errorCount, setErrorCount] = useState<number>(0);
   const [needCheckCount, setNeedCheckCount] = useState<number>(0);
   const [notApplicableCount, setNotApplicableCount] = useState<number>(0);
 
-  function count(props: ExpendablesInfo) {
+  function count(props: ExpendablesInfo | AccTuningInfo) {
     let tempCorrectCount = 0;
     let tempErrorCount = 0;
     let tempNeedCheckCount = 0;
     let tempNotApplicableCount = 0;
 
-    for (const value of Object.values(props)) {
-      if (typeof value === "string" && value === "이상없음") {
-        tempCorrectCount += 1;
+    if ("accTuningList" in props) {
+      for (const item of props.accTuningList) {
+        switch (item.accTuningCondition) {
+          case "이상없음":
+            tempCorrectCount += 1;
+            break;
+          case "이상있음":
+            tempErrorCount += 1;
+            break;
+          case "확인필요":
+            tempNeedCheckCount += 1;
+            break;
+          case "해당없음":
+            tempNotApplicableCount += 1;
+            break;
+        }
       }
-      if (typeof value === "string" && value === "이상있음") {
-        tempErrorCount += 1;
-      }
-      if (typeof value === "string" && value === "확인필요") {
-        tempNeedCheckCount += 1;
-      }
-      if (typeof value === "string" && value === "해당없음") {
-        tempNotApplicableCount += 1;
+    } else {
+      for (const value of Object.values(props)) {
+        if (typeof value === "string") {
+          switch (value) {
+            case "이상없음":
+              tempCorrectCount += 1;
+              break;
+            case "이상있음":
+              tempErrorCount += 1;
+              break;
+            case "확인필요":
+              tempNeedCheckCount += 1;
+              break;
+            case "해당없음":
+              tempNotApplicableCount += 1;
+              break;
+          }
+        }
       }
     }
 

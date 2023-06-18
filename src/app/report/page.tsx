@@ -4,6 +4,7 @@ import CertInfo from "@/components/CertInfo";
 import ElectronicsInfo from "@/components/ElectronicsInfo";
 import EvaluationInfo from "@/components/EvaluationInfo";
 import ExpendablesInfo from "@/components/ExpendablesInfo";
+import Footer from "@/components/Footer";
 import PaintingsInfo from "@/components/PaintingsInfo";
 import SellerInfo from "@/components/SellerInfo";
 import {
@@ -39,6 +40,7 @@ const ReportPage = async () => {
       <ElectronicsInfo {...electronicsInfo} />
       <PaintingsInfo {...paintingsInfo} />
       <AccTuningInfo {...accTuningInfo} />
+      <Footer mechanic={bikeInfo.mechanic} />
       <div id="portal" />
     </>
   );
