@@ -12,14 +12,12 @@ type Props = {
     measure: string;
     condition: string;
   }[];
-  variant?: "chargingSystem" | "painting" | "tuning";
+  variant?: "chargingSystem" | "painting";
 };
 
 const AccordionContent = ({ comment, images, items, variant }: Props) => {
   const backgroundColor =
-    variant === "chargingSystem" || "painting" || "tuning"
-      ? "bg-white"
-      : "bg-gray-100";
+    variant === "chargingSystem" || "painting" ? "bg-white" : "bg-gray-100";
 
   return (
     <section className={`flex flex-col items-center ${backgroundColor}`}>

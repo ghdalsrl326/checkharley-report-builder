@@ -5,14 +5,12 @@ type Props = {
   title: string;
   measure: string;
   condition: string;
-  variant?: "chargingSystem" | "painting" | "tuning";
+  variant?: "chargingSystem" | "painting";
 };
 
 const AccordionItem = ({ title, measure, condition, variant }: Props) => {
   const backgroundColor =
-    variant === "chargingSystem" || "painting" || "tuning"
-      ? "bg-gray-100"
-      : "bg-white";
+    variant === "chargingSystem" || "painting" ? "bg-gray-100" : "bg-white";
 
   const rangeSubTitle = (title: string): string => {
     if (title === "최초 배터리 전압") {
