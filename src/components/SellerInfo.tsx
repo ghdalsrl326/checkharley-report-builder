@@ -38,7 +38,7 @@ const SellerInfo = ({
           <h4 className="text-sm font-bold">{bikeLocation}</h4>
         </div>
       </div>
-      <div className="flex flex-row justify-center w-10/12">
+      <div className="flex flex-row justify-center w-6/12">
         <a href={salesArticleURL}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

@@ -758,4 +758,11 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      title: 'bikeModelName',
+      subtitle: 'bikeNumber',
+      media: 'salesArticleCaptureImage',
+    },
+  },
 }
