@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { EvaluationInfo } from "@/data/report.type";
-import RadarChart from "./RadarChart";
 import MarkdownViewer from "./MarkdownViewer";
 
 const EvaluationInfo = ({ evaluationComment }: EvaluationInfo) => {
