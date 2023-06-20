@@ -6,8 +6,8 @@ import {
   CertInfo,
   ExpendablesInfo,
   ElectronicsInfo,
-  TuningInfo,
   PaintingsInfo,
+  AccTuningInfo,
 } from "@/data/report.type";
 import { client } from "./sanity";
 
@@ -128,7 +128,9 @@ export async function getPaintingsInfo(
   );
 }
 
-export async function getAccTuningInfo(reportId: string): Promise<TuningInfo> {
+export async function getAccTuningInfo(
+  reportId: string
+): Promise<AccTuningInfo> {
   return client.fetch(
     `*[_type == "report" && _id == "${reportId}"][0]{
       accTuningComment,
