@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthContext>
-          <SWRConfigContext>{children}</SWRConfigContext>
-        </AuthContext>
+        {/* <AuthContext> */}
+        <SWRConfigContext>{children}</SWRConfigContext>
+        {/* </AuthContext> */}
       </body>
     </html>
   );

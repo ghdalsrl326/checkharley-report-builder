@@ -19,8 +19,14 @@ import {
 } from "@/service/report";
 import React from "react";
 
-const ReportPage = async () => {
-  const reportId = "9bc7b286-98ca-41cd-8cde-c082261e5246";
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+const ReportPage = async ({ params: { slug } }: Props) => {
+  const reportId = slug;
   const bikeInfo = await getBikeInfo(reportId);
   const sellerInfo = await getSellerInfo(reportId);
   const evaluationComment = await getEvaluationComment(reportId);
