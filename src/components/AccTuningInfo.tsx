@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { AccTuningInfo } from "@/data/report.type";
 import { BsChevronUp as ArrowUpIcon } from "react-icons/bs";
-import SummaryBoard from "./SummaryBoard";
-import AccordionTuningItem from "./AccordionTuningItem";
+import SummaryBoard from "@/components/SummaryBoard";
+import AccordionTuningItem from "@/components/AccordionTuningItem";
 
 const AccTuningInfo = (props: AccTuningInfo) => {
   const [openAccordion, setOpenAccordion] = useState<boolean>(false);

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { EvaluationInfo } from "@/data/report.type";
-import MarkdownViewer from "./MarkdownViewer";
+import MarkdownViewer from "@/components/MarkdownViewer";
 
 const EvaluationInfo = ({ evaluationComment }: EvaluationInfo) => {
   return (

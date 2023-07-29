@@ -7,8 +7,8 @@ import { BsSignStopFill as StopIcon } from "react-icons/bs";
 import { FaOilCan as OilIcon } from "react-icons/fa";
 import { MdTireRepair as TireIcon } from "react-icons/md";
 import { GiGears as ExtraIcon } from "react-icons/gi";
-import SummaryBoard from "./SummaryBoard";
-import AccordionSection from "./AccordionSection";
+import SummaryBoard from "@/components/SummaryBoard";
+import AccordionSection from "@/components/AccordionSection";
 
 const ExpendablesInfo = (props: ExpendablesInfo) => {
   const [openAccordion, setOpenAccordion] = useState<boolean>(false);

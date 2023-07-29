@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { IconType } from "react-icons";
 import { BsChevronUp as ArrowUpIcon } from "react-icons/bs";
 import { ImageType } from "@/data/report.type";
-import AccordionContent from "./AccordionContent";
+import AccordionContent from "@/components/AccordionContent";
 import Image from "next/image";
 
 type Props = {
