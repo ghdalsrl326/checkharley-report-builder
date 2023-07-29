@@ -4,7 +4,6 @@ import Image from "next/image";
 import { AccTuningInfo } from "@/data/report.type";
 import { BsChevronUp as ArrowUpIcon } from "react-icons/bs";
 import SummaryBoard from "./SummaryBoard";
-import AccordionSection from "./AccordionSection";
 import AccordionTuningItem from "./AccordionTuningItem";
 
 const AccTuningInfo = (props: AccTuningInfo) => {

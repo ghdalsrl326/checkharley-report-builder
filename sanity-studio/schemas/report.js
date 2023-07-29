@@ -696,11 +696,6 @@ export default {
       },
     },
     {
-      title: '악세사리 ACC / 튜닝 코멘트',
-      name: 'accTuningComment',
-      type: 'string',
-    },
-    {
       title: '악세사리 ACC / 튜닝 리스트',
       name: 'accTuningList',
       type: 'array',
@@ -714,32 +709,21 @@ export default {
               type: 'string',
             },
             {
-              title: '이미지',
-              name: 'accTuningImage',
-              type: 'image',
-            },
-            {
-              title: '위치',
-              name: 'accTuningLocation',
-              type: 'string',
+              title: '악세사리 ACC / 튜닝 이미지 리스트',
+              name: 'accTuningImages',
+              type: 'array',
+              of: [
+                {
+                  title: '악세사리 ACC / 튜닝 이미지',
+                  name: 'accTuningImage',
+                  type: 'image',
+                },
+              ],
             },
             {
               title: '브랜드',
               name: 'accTuningBrand',
               type: 'string',
-            },
-            {
-              title: '상태',
-              name: 'accTuningGrade',
-              type: 'string',
-              options: {
-                list: [
-                  {title: '상', value: '상'},
-                  {title: '중', value: '중'},
-                  {title: '하', value: '하'},
-                ],
-                layout: 'radio',
-              },
             },
             {
               title: '악세사리 이상 유무',
@@ -752,6 +736,11 @@ export default {
                 ],
                 layout: 'radio',
               },
+            },
+            {
+              title: '악세사리 ACC / 튜닝 코멘트',
+              name: 'accTuningComment',
+              type: 'string',
             },
           ],
         },

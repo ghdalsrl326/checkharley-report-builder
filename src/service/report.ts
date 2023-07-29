@@ -133,7 +133,6 @@ export async function getAccTuningInfo(
 ): Promise<AccTuningInfo> {
   return client.fetch(
     `*[_type == "report" && _id == "${reportId}"][0]{
-      accTuningComment,
       accTuningList}`
   );
 }
