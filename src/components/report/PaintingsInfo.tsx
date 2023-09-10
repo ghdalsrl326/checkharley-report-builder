@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { PaintingsInfo } from "@/data/report.type";
 import { BsChevronUp as ArrowUpIcon } from "react-icons/bs";
-import AccordionContent from "@/components/AccordionContent";
+import AccordionContent from "@/components/report/AccordionContent";
 
 const PaintingsInfo = (props: PaintingsInfo) => {
   const [openAccordion, setOpenAccordion] = useState<boolean>(false);

@@ -2,8 +2,8 @@ import { AccTuningType } from "@/data/report.type";
 import { urlFor } from "@/service/sanity";
 import Image from "next/image";
 import React from "react";
-import MarkdownViewer from "@/components/MarkdownViewer";
-import ImageSlide from "@/components/ImageSlide";
+import MarkdownViewer from "@/components/report/MarkdownViewer";
+import ImageSlide from "@/components/report/ImageSlide";
 
 type Props = {
   idx: number;

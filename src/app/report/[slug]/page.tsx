@@ -1,12 +1,12 @@
-import AccTuningInfo from "@/components/AccTuningInfo";
-import BikeInfo from "@/components/BikeInfo";
-import CertInfo from "@/components/CertInfo";
-import ElectronicsInfo from "@/components/ElectronicsInfo";
-import EvaluationInfo from "@/components/EvaluationInfo";
-import ExpendablesInfo from "@/components/ExpendablesInfo";
-import Footer from "@/components/Footer";
-import PaintingsInfo from "@/components/PaintingsInfo";
-import SellerInfo from "@/components/SellerInfo";
+import AccTuningInfo from "@/components/report/AccTuningInfo";
+import BikeInfo from "@/components/report/BikeInfo";
+import CertInfo from "@/components/report/CertInfo";
+import ElectronicsInfo from "@/components/report/ElectronicsInfo";
+import EvaluationInfo from "@/components/report/EvaluationInfo";
+import ExpendablesInfo from "@/components/report/ExpendablesInfo";
+import Footer from "@/components/report/Footer";
+import PaintingsInfo from "@/components/report/PaintingsInfo";
+import SellerInfo from "@/components/report/SellerInfo";
 import {
   getBikeInfo,
   getSellerInfo,

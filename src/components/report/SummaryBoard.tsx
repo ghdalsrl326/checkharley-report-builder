@@ -1,7 +1,7 @@
 "use client";
 import { AccTuningInfo, ExpendablesInfo } from "@/data/report.type";
 import React, { useEffect, useState } from "react";
-import RingChart from "@/components/RingChart";
+import RingChart from "@/components/report/RingChart";
 
 const SummaryBoard = (props: ExpendablesInfo | AccTuningInfo) => {
   const [correctCount, setCorrectCount] = useState<number>(0);

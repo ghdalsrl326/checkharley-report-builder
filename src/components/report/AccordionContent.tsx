@@ -1,7 +1,7 @@
 import React from "react";
-import MarkdownViewer from "@/components/MarkdownViewer";
-import ImageSlide from "@/components/ImageSlide";
-import AccordionItem from "@/components/AccordionItem";
+import MarkdownViewer from "@/components/report/MarkdownViewer";
+import ImageSlide from "@/components/report/ImageSlide";
+import AccordionItem from "@/components/report/AccordionItem";
 import { ImageType } from "@/data/report.type";
 
 type Props = {

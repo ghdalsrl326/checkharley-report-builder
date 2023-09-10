@@ -2,8 +2,8 @@
 import { CertInfo, ImageType } from "@/data/report.type";
 import React, { useState } from "react";
 import Image from "next/image";
-import ModalPortal from "@/components/ModalPortal";
-import ImageModal from "@/components/ImageModal";
+import ModalPortal from "@/components/report/ModalPortal";
+import ImageModal from "@/components/report/ImageModal";
 import { urlFor } from "@/service/sanity";
 
 const CertInfo = ({

@@ -2,8 +2,8 @@
 import { ImageType } from "@/data/report.type";
 import { urlFor } from "@/service/sanity";
 import React, { useState } from "react";
-import ModalPortal from "@/components/ModalPortal";
-import ImageModal from "@/components/ImageModal";
+import ModalPortal from "@/components/report/ModalPortal";
+import ImageModal from "@/components/report/ImageModal";
 
 type Props = {
   images: ImageType[];
