@@ -1,4 +1,4 @@
-import SessionCheck from "@/components/SessionCheck";
+import SessionCheck from "@/components/report/SessionCheck";
 
 // SSR
 export default function Home() {
