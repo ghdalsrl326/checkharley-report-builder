@@ -1,11 +1,18 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <header className="flex justify-between items-center p-4 bg-black">
       <Link href={"/"}>
-        <h1 className="text-3xl font-bold">{"Check Harley"}</h1>
+        <Image
+          className="w-full"
+          src={`/images/mainLogo.svg`}
+          alt={"headerLogo"}
+          width={204}
+          height={41}
+        />
       </Link>
       <nav className="flex text-white gap-4">
         <Link href={"/reservation"}>점검예약</Link>
