@@ -5,16 +5,16 @@ import { notoSerif, notoSans } from "@/app/fonts";
 export default function Home() {
   return (
     <main className={notoSerif.className}>
-      <section className="relative">
+      <section className="relative h-screen">
         <Image
           fill
           className="absolute top-0 left-0"
           src="/images/home/home-background-1.png"
           alt="home-background-1"
-          style={{ filter: "brightness(0.6)", objectFit: "cover" }}
+          style={{ filter: "brightness(0.7)", objectFit: "cover" }}
           quality={100}
         />
-        <div className="flex flex-col w-full h-screen justify-center gap-4 ml-28">
+        <div className="flex flex-col w-full h-screen justify-center gap-4 pl-28">
           <div className="z-10 text-[100px] font-semibold text-white">
             <h1>
               Check
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative flex">
+      <section className="relative flex h-screen">
         <div className="w-1/2 relative h-[902px]">
           <Image
             fill
@@ -67,6 +67,60 @@ export default function Home() {
             <h3 className="z-10 text-[18px] font-medium w-10/12 mt-10 underline">
               {"점검 리포트 미리보기 >"}
             </h3>
+          </div>
+        </div>
+      </section>
+      <section className="relative h-screen text-white">
+        <Image
+          fill
+          className="absolute top-0 left-0 w-full h-full"
+          src="/images/home/home-background-3.png"
+          alt="home-background-3"
+          style={{ objectFit: "cover", filter: "brightness(0.7)" }}
+          quality={100}
+        />
+        <div className={notoSans.className}>
+          <div className="flex flex-col w-full h-screen justify-center gap-4 pl-28">
+            <h1 className="text-5xl font-semibold z-10">
+              이런 분들께 추천드려요
+            </h1>
+            <hr className="z-10" />
+            <div className="flex flex-row gap-4 items-center z-10">
+              <h2 className="text-[80px] text-[#ffffff99] font-semibold">01</h2>
+              <div className="flex flex-col">
+                <h2 className="text-2xl font-semibold">
+                  전문성 있는 의견을 구하기 어려운 환경이에요
+                </h2>
+                <h2 className="font-normal">
+                  전문성 있는 의견을 구하기 어려운 환경이에요에 대한 고민을
+                  어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역
+                </h2>
+              </div>
+            </div>
+            <div className="flex flex-row gap-4 items-center z-10">
+              <h2 className="text-[80px] text-[#ffffff99] font-semibold">02</h2>
+              <div className="flex flex-col">
+                <h2 className="text-2xl font-semibold">
+                  허위매물인지 판단이 어려워요
+                </h2>
+                <h2 className="font-normal">
+                  허위매물인지 판단이 어려워요에 대한 고민을 어떻게 해결해줄 수
+                  있는지에 대해 작성하는 문구영역
+                </h2>
+              </div>
+            </div>
+            <div className="flex flex-row gap-4 items-center z-10">
+              <h2 className="text-[80px] text-[#ffffff99] font-semibold">03</h2>
+              <div className="flex flex-col">
+                <h2 className="text-2xl font-semibold">
+                  중고거래 경험이 처음이에요
+                </h2>
+                <h2 className="font-normal">
+                  중고거래 경험이 처음이에요에 대한 고민을 어떻게 해결해줄 수
+                  있는지에 대해 작성하는 문구영역
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
       </section>
