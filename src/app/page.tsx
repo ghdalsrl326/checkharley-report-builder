@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { notoSerif, notoSans } from "@/app/fonts";
+import { notoSerif, notoSans, notoSansKR } from "@/app/fonts";
+import RecommendationItem from "@/components/home/RecommendationItem";
 
 // SSR
 export default function Home() {
@@ -79,49 +80,71 @@ export default function Home() {
           style={{ objectFit: "cover", filter: "brightness(0.7)" }}
           quality={100}
         />
-        <div className={notoSans.className}>
+        <div className={notoSansKR.className}>
           <div className="flex flex-col w-full h-screen justify-center gap-4 pl-28">
             <h1 className="text-5xl font-semibold z-10">
               이런 분들께 추천드려요
             </h1>
             <hr className="z-10" />
-            <div className="flex flex-row gap-4 items-center z-10">
-              <h2 className="text-[80px] text-[#ffffff99] font-semibold">01</h2>
-              <div className="flex flex-col">
-                <h2 className="text-2xl font-semibold">
-                  전문성 있는 의견을 구하기 어려운 환경이에요
-                </h2>
-                <h2 className="font-normal">
-                  전문성 있는 의견을 구하기 어려운 환경이에요에 대한 고민을
-                  어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역
-                </h2>
-              </div>
-            </div>
-            <div className="flex flex-row gap-4 items-center z-10">
-              <h2 className="text-[80px] text-[#ffffff99] font-semibold">02</h2>
-              <div className="flex flex-col">
-                <h2 className="text-2xl font-semibold">
-                  허위매물인지 판단이 어려워요
-                </h2>
-                <h2 className="font-normal">
-                  허위매물인지 판단이 어려워요에 대한 고민을 어떻게 해결해줄 수
-                  있는지에 대해 작성하는 문구영역
-                </h2>
-              </div>
-            </div>
-            <div className="flex flex-row gap-4 items-center z-10">
-              <h2 className="text-[80px] text-[#ffffff99] font-semibold">03</h2>
-              <div className="flex flex-col">
-                <h2 className="text-2xl font-semibold">
-                  중고거래 경험이 처음이에요
-                </h2>
-                <h2 className="font-normal">
-                  중고거래 경험이 처음이에요에 대한 고민을 어떻게 해결해줄 수
-                  있는지에 대해 작성하는 문구영역
-                </h2>
-              </div>
-            </div>
+            <RecommendationItem
+              number="01"
+              title="전문성 있는 의견을 구하기 어려운 환경이에요"
+              description="전문성 있는 의견을 구하기 어려운 환경이에요에 대한 고민을 어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역"
+            />
+            <RecommendationItem
+              number="02"
+              title="허위매물인지 판단이 어려워요"
+              description="허위매물인지 판단이 어려워요에 대한 고민을 어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역"
+            />
+            <RecommendationItem
+              number="03"
+              title="중고거래 경험이 처음이에요"
+              description="중고거래 경험이 처음이에요에 대한 고민을 어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역"
+            />
           </div>
+        </div>
+      </section>
+      <section className="relative flex bg-white">
+        <div className="flex-grow min-w-[128px]" />
+        <div className="flex flex-col w-full relative">
+          <h1 className="z-10 text-[80px] font-semibold mt-10">
+            Check Harley Process
+          </h1>
+          <span className={notoSansKR.className}>
+            <h2 className="text-2xl font-light mb-8">
+              체크할리 검수 프로세스 설명문구를 작성하는 영역임
+            </h2>
+            <Image
+              src="/images/home/home-background-4.png"
+              alt="home-background-4"
+              layout="responsive"
+              width={1725}
+              height={868}
+              style={{ objectFit: "cover", objectPosition: "right" }}
+              quality={100}
+            />
+            <div className="flex flex-row mt-14 mb-1 text-2xl font-medium">
+              <h2 className="flex-1">1.예약포멧 제출</h2>
+              <h2 className="flex-1">2.점검일정 조율</h2>
+              <h2 className="flex-1">3.점검진행</h2>
+              <h2 className="flex-1">4.점검리포트 전달</h2>
+            </div>
+            <hr className="flex-grow border-t border-black" />
+            <div className="flex flex-row mt-4">
+              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
+                예약포멧 제출에 대한 문구를 작성하는 영역임
+              </h2>
+              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
+                점검일정 조율에 대한 문구를 작성하는 영역임
+              </h2>
+              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
+                점검진행에 대한 문구를 작성하는 영역임
+              </h2>
+              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
+                리포트 전달에 대한 문구를 작성하는 영역임
+              </h2>
+            </div>
+          </span>
         </div>
       </section>
     </main>
