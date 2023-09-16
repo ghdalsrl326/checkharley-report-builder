@@ -4,21 +4,30 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-4 bg-black">
+    <header className="flex justify-between items-center gap-x-28 px-28 py-10 bg-black overflow-x-auto">
       <Link href={"/"}>
-        <Image
-          className="w-full"
-          src={`/images/mainLogo.svg`}
-          alt={"headerLogo"}
-          width={204}
-          height={41}
-        />
+        <div className="w-[204px] h-[41px] relative inline-block">
+          <Image
+            src={`/images/mainLogo.png`}
+            alt={"headerLogo"}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </Link>
-      <nav className="flex text-white gap-4">
-        <Link href={"/reservation"}>점검예약</Link>
-        <Link href={"/report-preview"}>점검리포트 미리보기</Link>
-        <Link href={"/blog"}>블로그</Link>
-        <Link href={"/reviews"}>이용후기</Link>
+      <nav className="inline-flex text-xl text-white gap-20">
+        <Link href={"/reservation"} className="whitespace-nowrap">
+          점검예약
+        </Link>
+        <Link href={"/report-preview"} className="whitespace-nowrap">
+          점검리포트 미리보기
+        </Link>
+        <Link href={"/blog"} className="whitespace-nowrap">
+          블로그
+        </Link>
+        <Link href={"/reviews"} className="whitespace-nowrap">
+          이용후기
+        </Link>
       </nav>
     </header>
   );

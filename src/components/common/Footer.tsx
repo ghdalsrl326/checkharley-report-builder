@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-between items-start p-8 gap-y-4 bg-[#383C40] text-white">
+    <footer className="flex flex-col justify-between items-start p-8 gap-y-4 bg-[#383C40] text-white pl-28">
       <Image
         className="w-auto"
-        src={`/images/mainLogo.svg`}
+        src={`/images/mainLogo.png`}
         alt={"footerLogo"}
         width={204}
         height={41}
