@@ -1,4 +1,4 @@
-export const URLS = {
+export const URL = {
   HOME: "/",
   RESERVATION: "/reservation",
   REPORT_PREVIEW: "/report-preview",
@@ -6,6 +6,6 @@ export const URLS = {
   REVIEWS: "/reviews",
 };
 
-export const IMAGES = {
+export const IMAGE = {
   MAIN_LOGO: "/images/mainLogo.png",
 };

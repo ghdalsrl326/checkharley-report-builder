@@ -2,7 +2,7 @@ import Image from "next/image";
 import { notoSerif, notoSans, notoSansKR } from "@/app/fonts";
 import RecommendationItem from "@/components/home/RecommendationItem";
 import Link from "next/link";
-import { URLS } from "@/data/constant";
+import { URL } from "@/data/constant";
 
 // SSR
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
           <div className="flex flex-row gap-2">
             <Link
               className="z-10 text-white bg-black h-14 w-40 inline-flex items-center justify-center"
-              href={URLS.RESERVATION}
+              href={URL.RESERVATION}
             >
               점검예약 바로가기
             </Link>
@@ -76,7 +76,7 @@ export default function Home() {
               가능합니다.
             </h3>
             <Link
-              href={URLS.REPORT_PREVIEW}
+              href={URL.REPORT_PREVIEW}
               className="z-10 text-[18px] font-medium w-10/12 mt-10 underline"
             >
               {"점검 리포트 미리보기 >"}
