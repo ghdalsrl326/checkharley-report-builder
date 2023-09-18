@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { IconType } from "react-icons";
 import { BsChevronUp as ArrowUpIcon } from "react-icons/bs";
-import { ImageType } from "@/data/report.type";
 import AccordionContent from "@/components/report/AccordionContent";
 import Image from "next/image";
+import { ImageType } from "@/data/image.type";
 
 type Props = {
   startAdornment: IconType;
