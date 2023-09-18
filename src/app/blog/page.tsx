@@ -1,6 +1,9 @@
+import { getAllBlogPostPreview } from "@/service/blogPost";
 import React from "react";
 
-const BlogPage = () => {
+const BlogPage = async () => {
+  const previews = await getAllBlogPostPreview();
+
   return <div></div>;
 };
 

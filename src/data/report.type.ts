@@ -1,11 +1,4 @@
-export type ImageType = {
-  _type: string;
-  asset: {
-    _ref: string;
-    _key?: string;
-    _type: string;
-  };
-};
+import { ImageType } from "./image.type";
 
 export type Report = {
   mechanic: string;
