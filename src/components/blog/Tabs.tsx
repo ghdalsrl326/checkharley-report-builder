@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { BlogPostPreviewList } from "@/data/blogPost.type";
+import { PostPreview } from "@/data/post.type";
 import PostsGrid from "./PostGrid";
 import { BLOGTABS } from "@/data/constant";
 
-const Tabs = ({ posts }: { posts: BlogPostPreviewList }) => {
+const Tabs = ({ posts }: { posts: PostPreview[] }) => {
   const [activeTab, setActiveTab] = useState("전체");
 
   return (

@@ -1,11 +1,11 @@
-import { BlogPostPreview } from "@/data/blogPost.type";
+import { PostPreview } from "@/data/post.type";
 import { urlFor } from "@/service/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import MarkdownViewer from "../report/MarkdownViewer";
 
-type Props = { post: BlogPostPreview };
+type Props = { post: PostPreview };
 
 const PostCard = ({
   post: { mainImage, title, summary, tags, publishedAt },

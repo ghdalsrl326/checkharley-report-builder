@@ -1,12 +1,12 @@
 import React from "react";
 import PostCard from "./PostCard";
-import { BlogPostPreviewList } from "@/data/blogPost.type";
+import { PostPreview } from "@/data/post.type";
 
 const PostsGrid = ({
   posts,
   activeTab,
 }: {
-  posts: BlogPostPreviewList;
+  posts: PostPreview[];
   activeTab: string;
 }) => {
   const filteredPosts = posts.filter((post) => {

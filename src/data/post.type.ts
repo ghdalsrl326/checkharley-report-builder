@@ -1,6 +1,6 @@
 import { ImageType } from "./image.type";
 
-export type BlogPost = {
+export type Post = {
   mainImage: ImageType;
   category: string;
   title: string;
@@ -11,9 +11,7 @@ export type BlogPost = {
   publishedAt: string;
 };
 
-export type BlogPostPreview = Pick<
-  BlogPost,
+export type PostPreview = Pick<
+  Post,
   "mainImage" | "category" | "title" | "summary" | "tags" | "publishedAt"
 >;
-
-export type BlogPostPreviewList = BlogPostPreview[];
