@@ -3,7 +3,7 @@ export const URL = {
   RESERVATION: "/reservation",
   REPORT_PREVIEW: "/report-preview",
   BLOG: "/blog",
-  REVIEWS: "/reviews",
+  REVIEW: "/review",
 };
 
 export const IMAGE = {
@@ -11,3 +11,5 @@ export const IMAGE = {
 };
 
 export const BLOGTABS = ["전체", "라이딩스쿨", "체크서비스"];
+
+export const REVIEWTABS = ["전체", "라이딩스쿨", "체크서비스"];

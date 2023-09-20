@@ -26,7 +26,7 @@ const Header = () => {
         <Link href={URL.BLOG} className="whitespace-nowrap">
           블로그
         </Link>
-        <Link href={URL.REVIEWS} className="whitespace-nowrap">
+        <Link href={URL.REVIEW} className="whitespace-nowrap">
           이용후기
         </Link>
       </nav>

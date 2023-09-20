@@ -17,7 +17,7 @@ const Footer = () => {
         <Link href={URL.RESERVATION}>점검예약</Link>
         <Link href={URL.REPORT_PREVIEW}>점검리포트 미리보기</Link>
         <Link href={URL.BLOG}>블로그</Link>
-        <Link href={URL.REVIEWS}>이용후기</Link>
+        <Link href={URL.REVIEW}>이용후기</Link>
       </nav>
       <span>
         <p>
