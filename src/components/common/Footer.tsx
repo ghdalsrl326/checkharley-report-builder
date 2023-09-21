@@ -5,7 +5,7 @@ import { IMAGE, URL } from "@/data/constant";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-between items-start p-8 gap-y-4 bg-[#383C40] text-white pl-28">
+    <footer className="flex flex-col justify-between items-start p-4 md:p-8 pl-4 md:pl-28 gap-y-4 bg-[#383C40] text-white text-xs md:text-base">
       <Image
         className="w-auto"
         src={IMAGE.MAIN_LOGO}
