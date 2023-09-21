@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { PostPreview } from "@/data/post.type";
-import PostsGrid from "./PostGrid";
-import { BLOGTABS } from "@/data/constant";
+import { REVIEWTABS } from "@/data/constant";
+import ReviewGrid from "./ReviewGrid";
 
 // TODO: refactor blog and review tab structure reusable and SEO friendly
 const Tabs = ({ posts }: { posts: PostPreview[] }) => {
@@ -12,7 +12,7 @@ const Tabs = ({ posts }: { posts: PostPreview[] }) => {
     <div className="w-full">
       <div className="flex font-medium relative mb-16 text-lg sm:text-lg md:text-xl lg:text-2xl">
         <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D6D6D6]" />
-        {BLOGTABS.map((tab) => (
+        {REVIEWTABS.map((tab) => (
           <button
             key={tab}
             className={`px-4 py-2 relative z-10 ${
@@ -29,7 +29,7 @@ const Tabs = ({ posts }: { posts: PostPreview[] }) => {
           </button>
         ))}
       </div>
-      <PostsGrid posts={posts} activeTab={activeTab} />
+      <ReviewGrid posts={posts} activeTab={activeTab} />
     </div>
   );
 };

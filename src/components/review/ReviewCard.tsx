@@ -1,29 +1,33 @@
+import { PostPreview } from "@/data/post.type";
+import { urlFor } from "@/service/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Props = { post: Post };
+type Props = { post: PostPreview };
 
 const ReviewCard = ({
-  post: { title, description, date, category, path },
+  post: { mainImage, title, summary, tags, publishedAt },
 }: Props) => {
+  const mainImageUrl = urlFor(mainImage).url();
+
   return (
-    <Link href={`/posts/${path}`}>
-      <article className="rounded-md overflow-hidden shadow-lg hover:shadow-xl">
-        <Image
-          className="w-full"
-          src={`/images/posts/${path}.png`}
-          alt={title}
-          width={300}
-          height={200}
-        />
-        <div className="flex flex-col items-center p-4">
-          <time className="self-end text-gray-700">{date.toString()}</time>
+    <Link href={`/review/${encodeURIComponent(title)}`}>
+      <article className="overflow-hidden">
+        <div className="filter grayscale hover:grayscale-0 transition duration-300">
+          <Image
+            className="w-full"
+            src={mainImageUrl}
+            alt={title}
+            width={300}
+            height={200}
+          />
+        </div>
+        <div className="flex flex-col items-start p-4">
           <h3 className="text-lg font-bold">{title}</h3>
-          <p className="w-full truncate text-center">{description}</p>
-          <span className="text-sm rounded-lg bg-green-100 px-2 my-2">
-            {category}
-          </span>
+          <time className="self-start text-gray-700">
+            {publishedAt.toString()}
+          </time>
         </div>
       </article>
     </Link>
