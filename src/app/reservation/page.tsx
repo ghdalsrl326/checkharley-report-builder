@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ReservationForm from "@/components/reservation/ReservationForm";
 
-const reservationPage = () => {
+const ReservationPage = () => {
   return (
     <section className="flex items-center h-screen relative">
       <div className="inline-flex flex-col justify-center gap-8 relative h-screen pl-28 z-10">
@@ -27,4 +27,4 @@ const reservationPage = () => {
   );
 };
 
-export default reservationPage;
+export default ReservationPage;

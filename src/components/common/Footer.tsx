@@ -23,7 +23,7 @@ const Footer = () => {
         <p>
           상호 : 체크할리 ㅣ 대표자명 : 홍민기 ㅣ 개인정보관리책임자 : 홍민기
         </p>
-        <p>전화번호 : 0000-0000 ㅣ 이메일 : check.harley.dacison@gmail.com</p>
+        <p>이메일 : check.harley.davison@gmail.com</p>
       </span>
       <span>
         <p>COPYRIGHT © 2023 체크할리 ㅣ CheckHarley All rights reserved</p>

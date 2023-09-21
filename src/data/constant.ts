@@ -8,6 +8,7 @@ export const URL = {
 
 export const IMAGE = {
   MAIN_LOGO: "/images/mainLogo.png",
+  DRAWER_LOGO: "/images/drawerLogo.png",
 };
 
 export const BLOGTABS = ["전체", "라이딩스쿨", "체크서비스"];
