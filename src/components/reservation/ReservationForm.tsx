@@ -28,8 +28,8 @@ const ReservationForm = () => {
   return (
     <section className="rounded-md mx-auto">
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex space-x-4">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="w-full md:w-1/2">
             <label className="block text-sm font-medium text-gray-700">
               성함
             </label>
@@ -42,7 +42,7 @@ const ReservationForm = () => {
               required
             />
           </div>
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2">
             <label className="block text-sm font-medium text-gray-700">
               연락처
             </label>
@@ -57,8 +57,8 @@ const ReservationForm = () => {
           </div>
         </div>
 
-        <div className="flex space-x-4">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="w-full md:w-1/2">
             <label className="block text-sm font-medium text-gray-700">
               구매를 고려중인 할리데이비슨
             </label>
@@ -71,7 +71,7 @@ const ReservationForm = () => {
               required
             />
           </div>
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2">
             <label className="block text-sm font-medium text-gray-700">
               점검 희망일
             </label>
