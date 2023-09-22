@@ -17,15 +17,15 @@ export default function Home() {
           style={{ filter: "brightness(0.7)", objectFit: "cover" }}
           quality={100}
         />
-        <div className="flex flex-col w-full h-screen justify-center gap-7 pl-28">
-          <div className="z-10 text-[100px] font-semibold text-white">
+        <div className="flex flex-col w-full h-screen justify-center gap-7 px-4 md:pl-28">
+          <div className="z-10 leading-normal text-5xl md:text-[100px] font-semibold text-white">
             <h1>
               Check
               <br />
               Your Harley
             </h1>
           </div>
-          <h3 className="z-10 text-2xl font-medium text-white">
+          <h3 className="z-10 text-xl md:text-2xl font-medium text-white">
             중고 할리데이비슨 거래의 합리적인 선택, 체크할리와 함께하세요
           </h3>
           <div className="flex flex-row gap-2">
@@ -46,8 +46,35 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative flex h-screen">
-        <div className="w-1/2 relative h-[902px]">
+      <section className="relative flex flex-col md:flex-row h-screen">
+        <div className="flex flex-col w-full md:w-1/2 h-screen justify-center gap-4 pl-4 md:ml-14">
+          <div className="flex w-full items-center gap-x-4">
+            <h1 className="z-10 text-4xl leading-normal md:text-[80px] font-semibold">
+              Check Harley
+            </h1>
+            <hr className="flex-grow border-t border-black" />
+          </div>
+          <div className={notoSans.className}>
+            <h2 className="z-10 text-[18px] md:text-[28px] md:font-medium">
+              중고 할리데이비슨 거래의 합리적인 선택, <br /> 오늘부터 체크할리와
+              함께 하세요
+            </h2>
+            <br />
+            <h3 className="z-10 text-[12px] md:text-[18px] md:font-medium w-10/12">
+              {`체크할리는 할리데이비슨 코리아 출신 정비사가 정확하게 검수해드립니다. 
+              검수 후 상세한 내용의 점검 리포트 파일을 제공해드립니다.
+              국내 유일 중고 할리데이비슨 전문 컨설팅 서비스를 경험해보세요.`}
+            </h3>
+            <br />
+            <Link
+              href={URL.REPORT_PREVIEW}
+              className="z-10 text-[18px] font-medium w-10/12 mt-10 underline"
+            >
+              {"점검 리포트 미리보기 >"}
+            </Link>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 relative h-[902px] md:order-first">
           <Image
             fill
             className="absolute top-0 left-0 h-full w-full"
@@ -57,32 +84,6 @@ export default function Home() {
             quality={100}
           />
         </div>
-        <div className="flex flex-col w-1/2 h-screen justify-center gap-4 ml-14">
-          <div className="flex w-full items-center gap-x-4">
-            <h1 className="z-10 text-[80px] font-semibold">Check Harley</h1>
-            <hr className="flex-grow border-t border-black" />
-          </div>
-          <div className={notoSans.className}>
-            <h2 className="z-10 text-[28px] font-medium">
-              중고 할리데이비슨 거래의 합리적인 선택, <br /> 오늘부터 체크할리와
-              함께 하세요
-            </h2>
-            <br />
-            <h3 className="z-10 text-[18px] font-medium w-10/12">
-              체크할리는 할리데이비슨 코리아 출신 정비사가 정확하게
-              검수해드립니다. 검수 후 상세한 내용의 점검 리포트 파일을
-              제공해드립니다. 국내 유일 할리데이비슨 중고거래 전문 서비스를
-              경험해보세요. 간단한 정보입력만으로 중고 할리데이비슨 검수 신청이
-              가능합니다.
-            </h3>
-            <Link
-              href={URL.REPORT_PREVIEW}
-              className="z-10 text-[18px] font-medium w-10/12 mt-10 underline"
-            >
-              {"점검 리포트 미리보기 >"}
-            </Link>
-          </div>
-        </div>
       </section>
       <section className="relative h-screen text-white">
         <Image
@@ -90,12 +91,12 @@ export default function Home() {
           className="absolute top-0 left-0 w-full h-full"
           src="/images/home/home-background-3.png"
           alt="home-background-3"
-          style={{ objectFit: "cover", filter: "brightness(0.7)" }}
+          style={{ filter: "brightness(0.7)", objectFit: "cover" }}
           quality={100}
         />
         <div className={notoSansKR.className}>
-          <div className="flex flex-col w-full h-screen justify-center gap-4 pl-28">
-            <h1 className="text-5xl font-semibold z-10">
+          <div className="flex flex-col w-full h-screen justify-center gap-4 px-4 md:pl-28">
+            <h1 className="text-2xl md:text-5xl font-semibold z-10">
               이런 분들께 추천드려요
             </h1>
             <hr className="z-10" />
@@ -117,13 +118,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative flex bg-white">
-        <div className="flex flex-col w-full relative pl-28">
-          <h1 className="z-10 text-[80px] font-semibold mt-10">
+      <section className="relative flex flex-col md:flex-row bg-white">
+        <div className="flex flex-col w-full relative pl-4 md:pl-28">
+          <h1 className="z-10 text-[40px] md:text-[80px] font-semibold mt-10">
             Check Harley Process
           </h1>
           <span className={notoSansKR.className}>
-            <h2 className="text-2xl font-light mb-8">
+            <h2 className=" text-[14px] md:text-2xl font-light mb-8">
               체크할리 검수 프로세스 설명문구를 작성하는 영역임
             </h2>
             <Image
@@ -135,14 +136,14 @@ export default function Home() {
               style={{ objectFit: "cover", objectPosition: "right" }}
               quality={100}
             />
-            <div className="flex flex-row mt-14 mb-1 text-2xl font-medium">
+            <div className="flex flex-col gap-y-6 md:flex-row mt-14 mb-1 text-[14px] md:text-[24px] font-medium">
               <h2 className="flex-1">1.예약포멧 제출</h2>
               <h2 className="flex-1">2.점검일정 조율</h2>
               <h2 className="flex-1">3.점검진행</h2>
               <h2 className="flex-1">4.점검리포트 전달</h2>
             </div>
-            <hr className="flex-grow border-t border-black" />
-            <div className="flex flex-row mt-4">
+            <hr className="hidden md:flex flex-grow border-t border-black" />
+            <div className="hidden md:flex flex-row mt-4 text-[12px] md:[18px]">
               <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
                 예약포멧 제출에 대한 문구를 작성하는 영역임
               </h2>
@@ -159,24 +160,36 @@ export default function Home() {
           </span>
         </div>
       </section>
-      <section className="relative flex bg-white mt-40 mb-32 justify-around">
-        <div className="flex flex-col w-1/3 gap-6 relative">
-          <h1 className="text-5xl font-semibold leading-snug">
+      <section className="relative flex flex-col md:flex-row bg-white mt-40 mb-32 justify-around">
+        <div className="flex flex-col w-full px-4 md:px-0 md:w-1/3 gap-6 relative">
+          <h1 className="text-[24px] w-screen md:text-5xl font-semibold leading-snug">
             할리데이비슨 코리아 <br />
             출신 전문 정비사가 도와드려요
           </h1>
+          <div className="relative w-full h-[344px] md:h-[730px] md:w-1/2 md:bottom-[-300px] md:hidden">
+            <Image
+              fill
+              className="absolute z-10 "
+              src="/images/home/home-background-8.png"
+              alt="home-background-8"
+              style={{ objectFit: "cover" }}
+              quality={100}
+            />
+          </div>
           <span className="flex flex-row gap-4 items-baseline">
-            <h2 className="text-2xl font-semibold">최상열</h2>
-            <h3 className="text-xl">정비사</h3>
+            <h2 className="text-lg md:text-2xl font-semibold">최상열</h2>
+            <h3 className="text-base md:text-xl">정비사</h3>
           </span>
-          <div className="flex flex-col gap-4 text-lg font-normal">
-            <li>공식서비스팀 경력 포함 총 6년 경력</li>
-            <p className="pl-6">
+          <div className="flex flex-col gap-4 font-normal">
+            <li className="text-[14px] md:text-lg">
+              공식서비스팀 경력 포함 총 6년 경력
+            </li>
+            <p className="pl-6 text-[12px] md:text-lg">
               2017-2021 할리데이비슨 코리아 서비스팀 근무 ㅣ 주임 <br />
               2021-현재 아지트 모터사이클 정비팀 근무 ㅣ 과장 재직
             </p>
-            <li>점검항목</li>
-            <p className="pl-6">
+            <li className="text-[14px] md:text-lg">점검항목</li>
+            <p className="pl-6 text-[12px] md:text-lg">
               서류 기본사항 | 폐지증명서, 자동차 양도증명서/도장, 열쇠 개수 등
               <br /> <br />
               소모품 체크 | 오일(엔진오일, 미션오일, 브레이크 오일), 타이어,
@@ -192,7 +205,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="relative w-1/2 bottom-[-300px]">
+        <div className="hidden md:block relative w-full h-[344px] md:h-[730px] md:w-1/2 md:bottom-[-300px]">
           <Image
             fill
             className="absolute z-10 "
@@ -203,7 +216,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="relative w-screen h-[70vh]">
+      <section className="hidden md:block relative w-screen h-[70vh]">
         <Image
           fill
           className="absolute top-0 left-0"
