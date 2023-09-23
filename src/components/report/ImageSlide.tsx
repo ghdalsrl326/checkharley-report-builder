@@ -1,5 +1,5 @@
 "use client";
-import { ImageType } from "@/data/report.type";
+import { ImageType } from "@/data/image.type";
 import { urlFor } from "@/service/sanity";
 import React, { useState } from "react";
 import ModalPortal from "@/components/report/ModalPortal";

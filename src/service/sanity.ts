@@ -1,4 +1,4 @@
-import { ImageType } from "@/data/report.type";
+import { ImageType } from "@/data/image.type";
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 

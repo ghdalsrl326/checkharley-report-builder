@@ -1,4 +1,4 @@
-import { ImageType } from "./image.type";
+import { ImageType } from "@/data/image.type";
 
 export type Report = {
   mechanic: string;

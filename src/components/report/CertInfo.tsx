@@ -1,5 +1,6 @@
 "use client";
-import { CertInfo, ImageType } from "@/data/report.type";
+import { CertInfo } from "@/data/report.type";
+import { ImageType } from "@/data/image.type";
 import React, { useState } from "react";
 import Image from "next/image";
 import ModalPortal from "@/components/report/ModalPortal";

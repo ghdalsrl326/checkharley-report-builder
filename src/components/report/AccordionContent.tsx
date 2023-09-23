@@ -2,7 +2,7 @@ import React from "react";
 import MarkdownViewer from "@/components/report/MarkdownViewer";
 import ImageSlide from "@/components/report/ImageSlide";
 import AccordionItem from "@/components/report/AccordionItem";
-import { ImageType } from "@/data/report.type";
+import { ImageType } from "@/data/image.type";
 
 type Props = {
   comment: string;
