@@ -1,14 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import { sendReservationEmail } from "@/service/reservation";
+import { ChangeEvent, FormEvent, useState } from "react";
+
+type Form = {
+  name: string;
+  contact: string;
+  harleyModel: string;
+  preferredDate: string;
+};
+
+const DEFAULT_DATA = {
+  name: "",
+  contact: "",
+  harleyModel: "",
+  preferredDate: "",
+};
 
 const ReservationForm = () => {
-  const [name, setName] = useState<string>("");
-  const [contact, setContact] = useState<string>("");
-  const [harleyModel, setHarleyModel] = useState<string>("");
-  const [preferredDate, setPreferredDate] = useState<string>("");
+  const [form, setForm] = useState<Form>(DEFAULT_DATA);
   const [privacyAgreement, setPrivacyAgreement] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!privacyAgreement) {
@@ -16,28 +33,32 @@ const ReservationForm = () => {
       return;
     }
 
-    // 여기서 예약 정보를 처리하거나 API로 전송할 수 있습니다.
-    console.log({
-      name,
-      contact,
-      harleyModel,
-      preferredDate,
-    });
+    sendReservationEmail(form)
+      .then(() => {
+        setForm(DEFAULT_DATA);
+        alert(
+          "예약 정보가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다."
+        );
+      })
+      .catch(() => {
+        alert("예약 정보 전송에 실패했습니다. 다시 시도해주세요.");
+      });
   };
 
   return (
     <section className="rounded-md mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={onSubmit} className="space-y-4">
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
           <div className="w-full md:w-1/2">
             <label className="block text-sm font-medium text-gray-700">
               성함
             </label>
             <input
+              name="name"
               type="text"
-              value={name}
+              value={form.name}
               placeholder="성함을 입력해주세요"
-              onChange={(e) => setName(e.target.value)}
+              onChange={onChange}
               className="mt-1 p-2 w-full border rounded-md"
               required
             />
@@ -47,10 +68,11 @@ const ReservationForm = () => {
               연락처
             </label>
             <input
+              name="contact"
               type="text"
-              value={contact}
+              value={form.contact}
               placeholder="연락처를 입력해주세요"
-              onChange={(e) => setContact(e.target.value)}
+              onChange={onChange}
               className="mt-1 p-2 w-full border rounded-md"
               required
             />
@@ -63,10 +85,11 @@ const ReservationForm = () => {
               구매를 고려중인 할리데이비슨
             </label>
             <input
+              name="harleyModel"
               type="text"
-              value={harleyModel}
+              value={form.harleyModel}
               placeholder="판매글 또는 판매자 연락처 기재"
-              onChange={(e) => setHarleyModel(e.target.value)}
+              onChange={onChange}
               className="mt-1 p-2 w-full border rounded-md"
               required
             />
@@ -76,10 +99,11 @@ const ReservationForm = () => {
               점검 희망일
             </label>
             <input
+              name="preferredDate"
               type="date"
-              value={preferredDate}
+              value={form.preferredDate}
               placeholder="점검 희망일을 선택해주세요"
-              onChange={(e) => setPreferredDate(e.target.value)}
+              onChange={onChange}
               className="mt-1 p-2 w-full border rounded-md"
               required
             />
