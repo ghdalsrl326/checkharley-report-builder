@@ -103,17 +103,17 @@ export default function Home() {
             <RecommendationItem
               number="01"
               title="전문성 있는 의견을 구하기 어려운 환경이에요"
-              description="전문성 있는 의견을 구하기 어려운 환경이에요에 대한 고민을 어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역"
+              description="지금까지 동호회나 지인들에게 부탁하셨나요? 이젠 할리 데이비슨 코리아 출신 정비사에게 맡겨보세요."
             />
             <RecommendationItem
               number="02"
               title="허위매물인지 판단이 어려워요"
-              description="허위매물인지 판단이 어려워요에 대한 고민을 어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역"
+              description="전문가가 직접 허위 매물 여부를 판단해드립니다. 점검에 동행하셔도 됩니다."
             />
             <RecommendationItem
               number="03"
               title="중고거래 경험이 처음이에요"
-              description="중고거래 경험이 처음이에요에 대한 고민을 어떻게 해결해줄 수 있는지에 대해 작성하는 문구영역"
+              description="필수 서류부터 커스텀 옵션까지 최소 25가지 항목을 점검해드립니다. 중고 거래의 합리적인 선택을 도와드리겠습니다."
             />
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function Home() {
           </h1>
           <span className={notoSansKR.className}>
             <h2 className=" text-[14px] md:text-2xl font-light mb-8">
-              체크할리 검수 프로세스 설명문구를 작성하는 영역임
+              {`예약 > 일정 조율 > 점검 > 리포트 전달`}
             </h2>
             <Image
               src="/images/home/home-background-4.png"
@@ -143,7 +143,7 @@ export default function Home() {
               <h2 className="flex-1">4.점검리포트 전달</h2>
             </div>
             <hr className="hidden md:flex flex-grow border-t border-black" />
-            <div className="hidden md:flex flex-row mt-4 text-[12px] md:[18px]">
+            {/* <div className="hidden md:flex flex-row mt-4 text-[12px] md:[18px]">
               <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
                 예약포멧 제출에 대한 문구를 작성하는 영역임
               </h2>
@@ -156,7 +156,7 @@ export default function Home() {
               <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
                 리포트 전달에 대한 문구를 작성하는 영역임
               </h2>
-            </div>
+            </div> */}
           </span>
         </div>
       </section>
