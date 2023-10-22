@@ -12,8 +12,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.AUTH_USER,
-    pass: process.env.AUTH_PASS,
+    user: process.env.NEXT_PUBLIC_ADMIN_USER,
+    pass: process.env.NEXT_PUBLIC_ADMIN_PASS,
   },
 });
 
@@ -24,9 +24,9 @@ export async function sendEmail({
   preferredDate,
 }: EmailData) {
   const mailData = {
-    to: process.env.AUTH_USER,
+    to: process.env.NEXT_PUBLIC_ADMIN_USER,
     subject: `[체크할리] ${name}님의 예약 신청입니다.`,
-    from: process.env.AUTH_USER,
+    from: process.env.NEXT_PUBLIC_ADMIN_USER,
     html: `
         <h1>예약 신청이 왔습니다.</h1>
         <p>이름: ${name}</p>
