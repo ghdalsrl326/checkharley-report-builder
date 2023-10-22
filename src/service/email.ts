@@ -23,6 +23,19 @@ export async function sendEmail({
   harleyModel,
   preferredDate,
 }: EmailData) {
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.error(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
+  });
+
   const mailData = {
     to: process.env.ADMIN_USER,
     subject: `[체크할리] ${name}님의 예약 신청입니다.`,
@@ -36,5 +49,18 @@ export async function sendEmail({
         `,
   };
 
-  return transporter.sendMail(mailData);
+  const info = await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData, (err, info) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
+  });
+
+  return { status: "OK", info };
 }
