@@ -1,5 +1,6 @@
 "use client";
-import { sendReservationEmail } from "@/service/reservation";
+import { createReservation } from "@/service/reservation";
+// import { sendReservationEmail } from "@/service/reservation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 type Form = {
@@ -33,7 +34,7 @@ const ReservationForm = () => {
       return;
     }
 
-    sendReservationEmail(form)
+    createReservation(form)
       .then(() => {
         setForm(DEFAULT_DATA);
         alert(
@@ -43,6 +44,16 @@ const ReservationForm = () => {
       .catch(() => {
         alert("예약 정보 전송에 실패했습니다. 다시 시도해주세요.");
       });
+    // sendReservationEmail(form)
+    //   .then(() => {
+    //     setForm(DEFAULT_DATA);
+    //     alert(
+    //       "예약 정보가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다."
+    //     );
+    //   })
+    //   .catch(() => {
+    //     alert("예약 정보 전송에 실패했습니다. 다시 시도해주세요.");
+    //   });
   };
 
   return (
