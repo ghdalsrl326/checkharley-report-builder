@@ -16,7 +16,8 @@ const PreviewPage = () => {
   ];
 
   return (
-    <section className="py-4">
+    <section className="flex flex-col px-6 py-16 gap-12">
+      <h1 className="text-3xl md:text-5xl font-bold">점검 리포트 미리보기</h1>
       {images.map((image, index) => (
         <Image key={index} src={image} alt={image} width={1920} height={1080} />
       ))}

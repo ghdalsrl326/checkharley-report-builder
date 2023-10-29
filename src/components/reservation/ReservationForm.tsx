@@ -1,6 +1,5 @@
 "use client";
 import { createReservation } from "@/service/reservation";
-// import { sendReservationEmail } from "@/service/reservation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 type Form = {
@@ -44,16 +43,6 @@ const ReservationForm = () => {
       .catch(() => {
         alert("예약 정보 전송에 실패했습니다. 다시 시도해주세요.");
       });
-    // sendReservationEmail(form)
-    //   .then(() => {
-    //     setForm(DEFAULT_DATA);
-    //     alert(
-    //       "예약 정보가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다."
-    //     );
-    //   })
-    //   .catch(() => {
-    //     alert("예약 정보 전송에 실패했습니다. 다시 시도해주세요.");
-    //   });
   };
 
   return (
@@ -70,7 +59,7 @@ const ReservationForm = () => {
               value={form.name}
               placeholder="성함을 입력해주세요"
               onChange={onChange}
-              className="mt-1 p-2 w-full border rounded-md"
+              className="p-2 w-full border rounded-md"
               required
             />
           </div>
@@ -84,7 +73,7 @@ const ReservationForm = () => {
               value={form.contact}
               placeholder="연락처를 입력해주세요"
               onChange={onChange}
-              className="mt-1 p-2 w-full border rounded-md"
+              className="p-2 w-full border rounded-md"
               required
             />
           </div>
@@ -101,7 +90,7 @@ const ReservationForm = () => {
               value={form.harleyModel}
               placeholder="판매글 또는 판매자 연락처 기재"
               onChange={onChange}
-              className="mt-1 p-2 w-full border rounded-md"
+              className="p-2 w-full border rounded-md"
               required
             />
           </div>
@@ -115,7 +104,7 @@ const ReservationForm = () => {
               value={form.preferredDate}
               placeholder="점검 희망일을 선택해주세요"
               onChange={onChange}
-              className="mt-1 p-2 w-full border rounded-md"
+              className="p-2 w-full border rounded-md"
               required
             />
           </div>
@@ -163,8 +152,11 @@ const ReservationForm = () => {
         </div>
 
         <div>
-          <button type="submit" className="py-4">
-            {"제출하기 >"}
+          <button
+            type="submit"
+            className="px-4 py-2 w-fit bg-[#FF3C00] opacity-90 text-white"
+          >
+            {"제출하기"}
           </button>
         </div>
       </form>
