@@ -9,14 +9,22 @@ export default function Home() {
   return (
     <main className={notoSerif.className}>
       <section className="relative h-screen">
-        <Image
+        {/* <Image
           fill
           className="absolute top-0 left-0"
           src="/images/home/home-background-1.png"
           alt="home-background-1"
           style={{ filter: "brightness(0.7)", objectFit: "cover" }}
           quality={100}
-        />
+        /> */}
+        <iframe
+          className="absolute top-0 left-0 w-full h-full border-none"
+          src="https://www.youtube.com/embed/wWsqROfpuqc?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&start=2&playlist=wWsqROfpuqc"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          style={{ filter: "brightness(0.7)" }}
+        ></iframe>
+
         <div className="flex flex-col w-full h-screen justify-center gap-7 px-4 md:pl-28">
           <div className="z-10 leading-normal text-5xl md:text-[100px] font-semibold text-white">
             <h1>
@@ -30,7 +38,7 @@ export default function Home() {
           </h3>
           <div className="flex flex-row gap-2">
             <Link
-              className="z-10 text-white bg-black h-14 w-40 inline-flex items-center justify-center"
+              className="z-10 text-white bg-[#FF3C00] h-14 w-40 inline-flex items-center justify-center"
               href={URL.RESERVATION}
             >
               점검예약 바로가기
@@ -39,7 +47,7 @@ export default function Home() {
               href="https://www.youtube.com/@checkharley"
               target="_blank"
               rel="noopener noreferrer"
-              className="z-10 text-white bg-black h-14 w-40 inline-flex items-center justify-center"
+              className="z-10 text-white bg-[#FF3C00] h-14 w-40 inline-flex items-center justify-center"
             >
               유튜브 보러가기
             </a>
