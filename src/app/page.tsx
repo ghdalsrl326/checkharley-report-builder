@@ -4,27 +4,19 @@ import RecommendationItem from "@/components/home/RecommendationItem";
 import Link from "next/link";
 import { URL } from "@/data/constant";
 
-// SSR
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <main className={notoSerif.className}>
       <section className="relative h-screen">
-        {/* <Image
-          fill
-          className="absolute top-0 left-0"
-          src="/images/home/home-background-1.png"
-          alt="home-background-1"
-          style={{ filter: "brightness(0.7)", objectFit: "cover" }}
-          quality={100}
-        /> */}
         <iframe
           className="absolute top-0 left-0 w-full h-full border-none"
           src="https://www.youtube.com/embed/wWsqROfpuqc?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&start=2&playlist=wWsqROfpuqc"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          style={{ filter: "brightness(0.7)" }}
+          style={{ filter: "brightness(0.3)" }}
         ></iframe>
-
         <div className="flex flex-col w-full h-screen justify-center gap-7 px-4 md:pl-28">
           <div className="z-10 leading-normal text-5xl md:text-[100px] font-semibold text-white">
             <h1>
@@ -55,7 +47,7 @@ export default function Home() {
         </div>
       </section>
       <section className="relative flex flex-col md:flex-row h-screen">
-        <div className="flex flex-col w-full md:w-1/2 h-screen justify-center gap-4 pl-4 md:ml-14">
+        <div className="flex flex-col w-full md:w-1/2 h-screen justify-center gap-4 pl-4 md:pl-14">
           <div className="flex w-full items-center gap-x-4">
             <h1 className="z-10 text-4xl leading-normal md:text-[80px] font-semibold">
               Check Harley
@@ -82,13 +74,13 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="w-full md:w-1/2 relative h-[902px] md:order-first">
+        <div className="w-full md:w-1/2 relative h-screen md:order-first">
           <Image
             fill
             className="absolute top-0 left-0 h-full w-full"
-            src="/images/home/home-background-2.png"
+            src="/images/home/home-background-2-new.png"
             alt="home-background-2"
-            style={{ objectFit: "cover", objectPosition: "right" }}
+            style={{ objectFit: "contain", objectPosition: "bottom" }}
             quality={100}
           />
         </div>
@@ -126,77 +118,59 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative flex flex-col md:flex-row bg-white">
-        <div className="flex flex-col w-full relative pl-4 md:pl-28">
-          <h1 className="z-10 text-[40px] md:text-[80px] font-semibold mt-10">
+      <section className="relative h-screen flex flex-col md:flex-row">
+        <div className="flex flex-col justify-center w-full relative pl-4 md:pl-28">
+          <h1 className="z-10 text-[40px] md:text-[80px] font-semibold">
             Check Harley Process
           </h1>
           <span className={notoSansKR.className}>
             <h2 className=" text-[14px] md:text-2xl font-light mb-8">
-              {`예약 > 일정 조율 > 점검 > 리포트 전달`}
+              간단한 예약 절차로 점검을 신청하세요
             </h2>
-            <Image
-              src="/images/home/home-background-4.png"
-              alt="home-background-4"
-              layout="responsive"
-              width={1725}
-              height={868}
-              style={{ objectFit: "cover", objectPosition: "right" }}
-              quality={100}
-            />
-            <div className="flex flex-col gap-y-6 md:flex-row mt-14 mb-1 text-[14px] md:text-[24px] font-medium">
-              <h2 className="flex-1">1.예약포멧 제출</h2>
-              <h2 className="flex-1">2.점검일정 조율</h2>
-              <h2 className="flex-1">3.점검진행</h2>
-              <h2 className="flex-1">4.점검리포트 전달</h2>
+            <div className="flex flex-col gap-y-6 md:flex-row text-[14px] md:text-[24px] font-medium">
+              <div className="flex-1">
+                <h2 className="text-6xl text-[#F6F6F6]">01</h2>
+                <h2 className="pl-4">예약포멧 제출</h2>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-6xl text-[#F6F6F6]">02</h2>
+                <h2 className="pl-4">점검일정 조율</h2>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-6xl text-[#F6F6F6]">03</h2>
+                <h2 className="pl-4">점검진행</h2>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-6xl text-[#F6F6F6]">04</h2>
+                <h2 className="pl-4">점검리포트 전달</h2>
+              </div>
             </div>
-            <hr className="hidden md:flex flex-grow border-t border-black" />
-            {/* <div className="hidden md:flex flex-row mt-4 text-[12px] md:[18px]">
-              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
-                예약포멧 제출에 대한 문구를 작성하는 영역임
-              </h2>
-              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
-                점검일정 조율에 대한 문구를 작성하는 영역임
-              </h2>
-              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
-                점검진행에 대한 문구를 작성하는 영역임
-              </h2>
-              <h2 className="flex-1 overflow-hidden text-overflow-ellipsis whitespace-nowrap">
-                리포트 전달에 대한 문구를 작성하는 영역임
-              </h2>
-            </div> */}
           </span>
         </div>
       </section>
-      <section className="relative flex flex-col md:flex-row bg-white mt-40 mb-32 justify-around">
-        <div className="flex flex-col w-full px-4 md:px-0 md:w-1/3 gap-6 relative">
-          <h1 className="text-[24px] w-screen md:text-5xl font-semibold leading-snug">
-            할리데이비슨 코리아 <br />
-            출신 전문 정비사가 도와드려요
+      <section className="relative flex flex-col md:flex-row bg-[#F3F3F3] justify-center">
+        <div className="flex flex-col w-full px-4 py-24 md:px-28 md:w-[70%] gap-6 relative">
+          <h1 className=" text-[24px] md:text-5xl font-semibold leading-snug">
+            할리데이비슨 코리아 출신
+            <br />
+            전문 정비사가 도와드려요
           </h1>
-          <div className="relative w-full h-[344px] md:h-[730px] md:w-1/2 md:bottom-[-300px] md:hidden">
-            <Image
-              fill
-              className="absolute z-10 "
-              src="/images/home/home-background-8.png"
-              alt="home-background-8"
-              style={{ objectFit: "cover" }}
-              quality={100}
-            />
-          </div>
           <span className="flex flex-row gap-4 items-baseline">
             <h2 className="text-lg md:text-2xl font-semibold">최상열</h2>
             <h3 className="text-base md:text-xl">정비사</h3>
           </span>
+          <hr className="border-t border-black" />
           <div className="flex flex-col gap-4 font-normal">
-            <li className="text-[14px] md:text-lg">
+            <h2 className="text-center w-fit text-[14px] px-4 bg-[#E73802] text-white md:text-lg">
               공식서비스팀 경력 포함 총 6년 경력
-            </li>
+            </h2>
             <p className="pl-6 text-[12px] md:text-lg">
               2017-2021 할리데이비슨 코리아 서비스팀 근무 ㅣ 주임 <br />
               2021-현재 아지트 모터사이클 정비팀 근무 ㅣ 과장 재직
             </p>
-            <li className="text-[14px] md:text-lg">점검항목</li>
+            <h2 className="text-center w-fit text-[14px] px-4 bg-[#E73802] text-white md:text-lg">
+              점검항목
+            </h2>
             <p className="pl-6 text-[12px] md:text-lg">
               서류 기본사항 | 폐지증명서, 자동차 양도증명서/도장, 열쇠 개수 등
               <br /> <br />
@@ -217,14 +191,14 @@ export default function Home() {
           <Image
             fill
             className="absolute z-10 "
-            src="/images/home/home-background-8.png"
+            src="/images/home/home-background-8-new.png"
             alt="home-background-8"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
             quality={100}
           />
         </div>
       </section>
-      <section className="hidden md:block relative w-screen h-[70vh]">
+      <section className="hidden md:block relative w-screen h-[70vh] ">
         <Image
           fill
           className="absolute top-0 left-0"
