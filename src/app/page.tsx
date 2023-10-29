@@ -80,7 +80,7 @@ export default function Home() {
             className="absolute top-0 left-0 h-full w-full"
             src="/images/home/home-background-2-new.png"
             alt="home-background-2"
-            style={{ objectFit: "contain", objectPosition: "bottom" }}
+            style={{ objectFit: "contain", objectPosition: "left bottom" }}
             quality={100}
           />
         </div>
