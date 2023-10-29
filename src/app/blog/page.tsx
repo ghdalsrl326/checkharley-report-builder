@@ -3,6 +3,11 @@ import Tabs from "@/components/blog/Tabs";
 import { getAllBlogPostPreview } from "@/service/blogPost";
 import React from "react";
 
+export const metadata = {
+  title: "체크할리 | CheckHarley - 블로그",
+  description: "할리데이비슨 라이딩과 관련된 모든 것을 알려드립니다.",
+};
+
 const BlogPage = async () => {
   const previews = await getAllBlogPostPreview();
 

@@ -2,6 +2,11 @@ import React from "react";
 import Image from "next/image";
 import ReservationForm from "@/components/reservation/ReservationForm";
 
+export const metadata = {
+  title: "체크할리 | CheckHarley - 점검 예약하기",
+  description: "간단한 절차로 할리데이비슨 점검을 예약하세요.",
+};
+
 const ReservationPage = () => {
   return (
     <section className="flex flex-col items-center py-16 md:h-screen relative md:flex-row ">

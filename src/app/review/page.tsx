@@ -2,6 +2,11 @@ import Tabs from "@/components/review/Tabs";
 import { getAllReviewPostPreview } from "@/service/reviewPost";
 import React from "react";
 
+export const metadata = {
+  title: "체크할리 | CheckHarley - 이용후기",
+  description: "성공적인 중고 할리데이비슨 거래 후기를 확인하세요.",
+};
+
 const ReviewPage = async () => {
   const previews = await getAllReviewPostPreview();
 

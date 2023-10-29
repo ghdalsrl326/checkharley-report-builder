@@ -1,6 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "체크할리 | CheckHarley - 점검 리포트 미리보기",
+  description: "할리 데이비슨 전문 정비사의 점검 리포트를 확인하세요.",
+};
+
 const PreviewPage = () => {
   const images = [
     "/images/report-preview/CheckHarleyReport-01.png",
