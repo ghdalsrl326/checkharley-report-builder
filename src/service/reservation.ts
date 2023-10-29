@@ -1,5 +1,6 @@
 import { client } from "./sanity";
 import { EmailData } from "./email";
+import { uuid } from "@sanity/uuid";
 
 // export async function sendReservationEmail(form: EmailData) {
 //   const response = await fetch("/api/reservation", {
@@ -28,7 +29,7 @@ export async function createReservation({
     contact,
     harleyModel,
     preferredDate,
-    _id: `${name}-${contact}-${harleyModel}-${preferredDate}`,
+    _id: uuid(),
   });
   return newReservation;
 }
