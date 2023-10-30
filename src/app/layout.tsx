@@ -4,6 +4,7 @@ import SWRConfigContext from "@/context/SWRConfigContext";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import { inter } from "@/app/fonts";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title:
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         <SWRConfigContext>{children}</SWRConfigContext>
         <Footer />
+        <Analytics />
         {/* </AuthContext> */}
       </body>
     </html>
