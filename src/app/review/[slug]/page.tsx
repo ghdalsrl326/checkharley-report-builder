@@ -1,8 +1,8 @@
 import PostContent from "@/components/blog/PostContent";
-import { getBlogPost } from "@/service/blogPost";
 import React from "react";
 import Image from "next/image";
 import { urlFor } from "@/service/sanity";
+import { getReviewPost } from "@/service/reviewPost";
 
 type Props = {
   params: {
@@ -10,8 +10,8 @@ type Props = {
   };
 };
 
-const PostPage = async ({ params: { slug } }: Props) => {
-  const post = await getBlogPost(decodeURIComponent(slug));
+const ReviewPostPage = async ({ params: { slug } }: Props) => {
+  const post = await getReviewPost(decodeURIComponent(slug));
 
   return (
     <article className="overflow-hidden bg-gray-100 shadow-lg m-4">
@@ -27,4 +27,4 @@ const PostPage = async ({ params: { slug } }: Props) => {
   );
 };
 
-export default PostPage;
+export default ReviewPostPage;

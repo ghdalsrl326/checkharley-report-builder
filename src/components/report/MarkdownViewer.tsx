@@ -17,7 +17,7 @@ const MarkdownViewer = ({ content }: { content: string }) => {
       components={{
         img: (image) => (
           <Image
-            className="w-full max-h-60 object-cover"
+            className="w-full h-fit object-cover"
             src={image.src || ""}
             alt={image.alt || ""}
             width={500}

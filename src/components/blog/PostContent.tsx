@@ -13,7 +13,7 @@ export default function PostContent({ post }: { post: Post }) {
       </div>
       <h1 className="text-4xl font-bold">{title}</h1>
       {/* <p className="text-xl font-bold">{description}</p> */}
-      <div className="w-44 border-2 border-sky-600 mt-4 mb-8" />
+      <div className="w-44 border-2 border-[#FF3C00] mt-4 mb-8" />
       <MarkdownViewer content={content} />
     </section>
   );
